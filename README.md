@@ -9,6 +9,8 @@ torch-1.8.0-cp38-cp38-manylinux2014_aarch64.whl
 
 torchvision-0.9.0-cp38-cp38-manylinux1_x86_64.whl
 
+conda install -c conda-forge 
+
 numpy typing-extensions pillow
 
 future lmdb Pillow pyyaml requests scikit-image scipy tqdm yapf
