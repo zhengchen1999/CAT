@@ -8,3 +8,9 @@ addict-2.4.0-py3-none-any.whl
 torch-1.8.0-cp38-cp38-manylinux2014_aarch64.whl
 
 torchvision-0.9.0-cp38-cp38-manylinux1_x86_64.whl
+
+numpy typing-extensions pillow
+
+future lmdb Pillow pyyaml requests scikit-image scipy tqdm yapf
+
+absl-py google-auth-oauthlib werkzeug grpcio tensorboard-plugin-wit tensorboard-data-server markdown protobuf
