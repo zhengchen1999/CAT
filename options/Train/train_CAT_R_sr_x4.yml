@@ -17,7 +17,7 @@ datasets:
     io_backend:
       type: disk
 
-    gt_size: 128
+    gt_size: 256
     use_flip: true
     use_rot: true
 
