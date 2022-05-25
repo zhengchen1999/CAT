@@ -1,7 +1,7 @@
 # general settings
-name: train_CAT_R_sr_x2
+name: train_CAT_R_2_sr_x4
 model_type: CATModle
-scale: 2
+scale: 4
 num_gpu: auto
 manual_seed: 10
 
@@ -12,8 +12,8 @@ datasets:
     name: DF2K
     type: PairedImageDataset_Master
     dataroot_gt: datasets/DF2K/HR
-    dataroot_lq: datasets/DF2K/LR_bicubic/X2
-    filename_tmpl: '{}x2'
+    dataroot_lq: datasets/DF2K/LR_bicubic/X4
+    filename_tmpl: '{}x4'
     io_backend:
       type: disk
 
@@ -33,26 +33,26 @@ datasets:
     name: Set5
     type: PairedImageDataset_Master
     dataroot_gt: datasets/Set5/HR
-    dataroot_lq: datasets/Set5/LR_bicubic/X2
-    filename_tmpl: '{}x2'
+    dataroot_lq: datasets/Set5/LR_bicubic/X4
+    filename_tmpl: '{}x4'
     io_backend:
       type: disk
 
 # network structures
 network_g:
   type: CAT
-  upscale: 2
+  upscale: 4
   in_chans: 3
   img_size: 64
-  split_size_0: [2,2,2,4,4,4]
-  split_size_1: [0,0,0,0,0,0] # The other side is H or W
+  split_size_0: [4,4,4,4,4,4]
+  split_size_1: [16,16,16,16,16,16]
   img_range: 1.
   depth: [6,6,6,6,6,6]
   embed_dim: 180
   num_heads: [6,6,6,6,6,6]
-  mlp_ratio: 4
+  mlp_ratio: 2
   resi_connection: '1conv'
-  block_name: 'CATB_axial'
+  block_name: 'CATB_regular'
   upsampler: 'pixelshuffle'
 
 # path

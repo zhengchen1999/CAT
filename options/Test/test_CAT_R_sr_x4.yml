@@ -16,16 +16,6 @@ datasets:
     io_backend:
       type: disk
 
-  test_2:  # the 2st test dataset
-    task: sr
-    name: Set14
-    type: PairedImageDataset_Master
-    dataroot_gt: datasets/Set14/HR
-    dataroot_lq: datasets/Set14/LR_bicubic/X4
-    filename_tmpl: '{}x4'
-    io_backend:
-      type: disk
-
 # network structures
 network_g:
   type: CAT

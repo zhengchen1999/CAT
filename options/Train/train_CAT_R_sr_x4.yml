@@ -1,7 +1,7 @@
 # general settings
-name: train_CAT_R_sr_x2
+name: train_CAT_R_sr_x4
 model_type: CATModle
-scale: 2
+scale: 4
 num_gpu: auto
 manual_seed: 10
 
@@ -12,8 +12,8 @@ datasets:
     name: DF2K
     type: PairedImageDataset_Master
     dataroot_gt: datasets/DF2K/HR
-    dataroot_lq: datasets/DF2K/LR_bicubic/X2
-    filename_tmpl: '{}x2'
+    dataroot_lq: datasets/DF2K/LR_bicubic/X4
+    filename_tmpl: '{}x4'
     io_backend:
       type: disk
 
@@ -33,8 +33,8 @@ datasets:
     name: Set5
     type: PairedImageDataset_Master
     dataroot_gt: datasets/Set5/HR
-    dataroot_lq: datasets/Set5/LR_bicubic/X2
-    filename_tmpl: '{}x2'
+    dataroot_lq: datasets/Set5/LR_bicubic/X4
+    filename_tmpl: '{}x4'
     io_backend:
       type: disk
 
