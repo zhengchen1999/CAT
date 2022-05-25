@@ -41,7 +41,7 @@ datasets:
 # network structures
 network_g:
   type: CAT
-  upscale: 2
+  upscale: 4
   in_chans: 3
   img_size: 64
   split_size_0: [4,4,4,4,4,4]
