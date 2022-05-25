@@ -1,1 +1,1 @@
-The CAT models are available at [here](www.baidu.com).
+The CAT pretrained models are available at [here](www.baidu.com).
