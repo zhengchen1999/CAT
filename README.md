@@ -6,8 +6,8 @@ This repository is for CAT introduced in the paper.
 
 ## Dependencies
 
-- Python 3.8
-- PyTorch >= 1.8.0
+- python 3.8
+- pyTorch >= 1.8.0
 - basicsr (pip install basicsr) For more information, please refer to [BasicSR](https://github.com/XPixelGroup/BasicSR.git).
 - timm
 - einops
