@@ -21,13 +21,13 @@ This repository is for CAT introduced in the paper.
    **You can change the testing configuration in YML file, like 'test_CAT_A_sr_x4.yml'.**
 
    ```shell
-   # CAT-A, sr, scale 4, proposed in the main paper
+   # CAT-A, SR (X4), produces results in Table 2 of the main paper
    python basicsr/test.py -opt options/Test/test_CAT_A_sr_x4.yml
    
-   # CAT-R, sr, scale 4, proposed in the main paper
+   # CAT-R, SR (X4), produces results in Table 2 of the main paper
    python basicsr/test.py -opt options/Test/test_CAT_R_sr_x4.yml
    
-   # CAT-R-2, sr, scale 4, proposed in supplementary material
+   # CAT-R-2, SR (X4), produces results in Table 1 of the supplementary material
    python basicsr/test.py -opt options/Test/test_CAT_R_2_sr_x4.yml
    ```
 
@@ -42,13 +42,13 @@ This repository is for CAT introduced in the paper.
    **You can change the training configuration in YML file, like 'train_CAT_A_sr_x4.yml'.**
 
    ```shell
-   # CAT-A, sr, scale 4, input=64x64, output=256x256
+   # CAT-A, SR (X4), input=64x64, output=256x256
    PYTHONPATH="./:${PYTHONPATH}" CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_sr_x4.yml --launcher pytorch
    
-   # CAT-R, sr, scale 4, input=64x64, output=256x256
+   # CAT-R, SR (X4), input=64x64, output=256x256
    PYTHONPATH="./:${PYTHONPATH}" CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_sr_x4.yml --launcher pytorch
    
-   # CAT-R-2, sr, scale 4, input=64x64, output=256x256
+   # CAT-R-2, SR (X4), input=64x64, output=256x256
    PYTHONPATH="./:${PYTHONPATH}" CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_2_sr_x4.yml --launcher pytorch
    ```
 
