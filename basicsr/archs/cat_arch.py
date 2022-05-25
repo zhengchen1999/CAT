@@ -694,7 +694,7 @@ class ResidualGroup(nn.Module):
         drop_paths (float | None): Stochastic depth rate.
         act_layer (nn.Module): Activation layer. Default: nn.GELU
         norm_layer (nn.Module): Normalization layer. Default: nn.LayerNorm
-        depth (int): Number of Cross Aggregation Transformer blocks.
+        depth (int): Number of Cross Aggregation Transformer blocks in residual group.
         use_chk (bool): Whether to use checkpointing to save memory.
         resi_connection: The convolutional block before residual connection. '1conv'/'3conv'
         block_name: The cross aggregation Transformer block. CATB_regular or CATB_axial
@@ -716,7 +716,7 @@ class ResidualGroup(nn.Module):
                     depth=2,
                     use_chk=False,
                     resi_connection='1conv',
-                    block_name='CSWinBlock'):
+                    block_name='CATB_axial'):
         super().__init__()
         self.use_chk = use_chk
         self.reso = reso
@@ -813,10 +813,10 @@ class CAT(nn.Module):
         img_size (int): Input image size. Default: 64
         in_chans (int): Number of input image channels. Default: 3
         embed_dim (int): Patch embedding dimension. Default: 180
-        depths (tuple(int)): Depth of each Swin Transformer layer.
+        depths (tuple(int)): Depth of each residual group (number of cross aggregation Transformer blocks in residual group).
         split_size_0 (tuple(int)): The one side of rectangle window.
         split_size_1 (tuple(int)): The other side of rectangle window. For axial-Rwin, split_size_w is Zero.
-        num_heads (tuple(int)): Number of attention heads in different layers.
+        num_heads (tuple(int)): Number of attention heads in different residual groups.
         mlp_ratio (float): Ratio of mlp hidden dim to embedding dim. Default: 4
         qkv_bias (bool): If True, add a learnable bias to query, key, value. Default: True
         qk_scale (float | None): Override default qk scale of head_dim ** -0.5 if set. Default: None
@@ -853,7 +853,7 @@ class CAT(nn.Module):
                 img_range=1.,
                 resi_connection='1conv',
                 upsampler='',
-                block_name='CSWinBlock',
+                block_name='CATB_axial',
                 **kwargs):
         super().__init__()
 
