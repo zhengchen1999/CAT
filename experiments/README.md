@@ -1,1 +1,4 @@
 The CAT pretrained models are available at [GoogleDrive](https://drive.google.com/drive/folders/17ls9MEIw8AvYWUquj-aYMlT0KxgThS4P?usp=sharing).
+
+Place pretrained models in 'pretrained_models'.
+
