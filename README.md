@@ -2,8 +2,6 @@
 
 This repository is for CAT introduced in the paper.
 
-
-
 ## Dependencies
 
 - python 3.8
