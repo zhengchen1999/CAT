@@ -16,7 +16,7 @@ This repository is for CAT introduced in the paper.
 
    We provide some models for image SR (x4): CAT-A, CAT-R, and CAT-R-2. They can be downloaded from [GoogleDrive](https://drive.google.com/drive/folders/17ls9MEIw8AvYWUquj-aYMlT0KxgThS4P?usp=sharing).
 
-2. Cd to 'CAT', run the folloing scripts. The testing configuration is in 'options/Test'. More detail about YML, please refer to [Training and Testing](https://github.com/XPixelGroup/BasicSR/blob/master/docs/TrainTest.md).
+2. Cd to 'CAT', run the folloing scripts. The testing configuration is in 'options/Test'. More detail about YML, please refer to [Configuration](https://github.com/XPixelGroup/BasicSR/blob/master/docs/Config.md).
 
    **You can change the testing configuration in YML file, like 'test_CAT_A_sr_x4.yml'.**
 

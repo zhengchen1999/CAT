@@ -1,1 +1,2 @@
-For more information about training and testing configuration, please refer to [BasicSR](https://github.com/XPixelGroup/BasicSR.git).
+For more information about training and testing configuration, please refer to [Configuration](https://github.com/XPixelGroup/BasicSR/blob/master/docs/Config.md).
+
