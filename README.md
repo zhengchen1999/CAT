@@ -42,13 +42,13 @@ This repository is for CAT introduced in the paper.
    **You can change the training configuration in YML file, like 'train_CAT_A_sr_x4.yml'.**
 
    ```shell
-   # CAT-A, SR (X4), input=64x64, output=256x256
+   # CAT-A, SR (X4), input=64x64, output=256x256, 4 GPUs
    PYTHONPATH="./:${PYTHONPATH}" CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_sr_x4.yml --launcher pytorch
    
-   # CAT-R, SR (X4), input=64x64, output=256x256
+   # CAT-R, SR (X4), input=64x64, output=256x256, 4 GPUs
    PYTHONPATH="./:${PYTHONPATH}" CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_sr_x4.yml --launcher pytorch
    
-   # CAT-R-2, SR (X4), input=64x64, output=256x256
+   # CAT-R-2, SR (X4), input=64x64, output=256x256, 4 GPUs
    PYTHONPATH="./:${PYTHONPATH}" CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_2_sr_x4.yml --launcher pytorch
    ```
 
