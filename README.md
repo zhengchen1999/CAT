@@ -6,7 +6,7 @@ This repository is for CAT introduced in the paper.
 
 - python 3.8
 - pytorch >= 1.8.0
-- basicsr (pip install basicsr) For more information, please refer to [BasicSR](https://github.com/XPixelGroup/BasicSR.git).
+- basicsr (pip install basicsr) For more information, please refer to [BasicSR](https://github.com/XPixelGroup/BasicSR).
 - timm
 - einops
 
@@ -56,5 +56,5 @@ This repository is for CAT introduced in the paper.
 
 ## Acknowledgements
 
-This code is built on  [BasicSR](https://github.com/XPixelGroup/BasicSR.git).
+This code is built on  [BasicSR](https://github.com/XPixelGroup/BasicSR).
 
