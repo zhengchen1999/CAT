@@ -35,7 +35,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: experiments/pretrained_models/model_CAT_R_x4.pth
+  pretrain_network_g: experiments/pretrained_models/model_CAT_R_sr_x4.pth
   strict_load_g: true
 
 # validation settings
