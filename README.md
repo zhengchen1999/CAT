@@ -14,7 +14,7 @@ This repository is for CAT introduced in the paper.
 
 1. Dwonload models for our paper and place them in 'experiments/pretrained_models'. 
 
-   We provide some models for image SR (x4): CAT-A, CAT-R, and CAT-R-2. They can be downloaded from [GoogleDrive](https://drive.google.com/drive/folders/1c6bI21dL5pOBJXSNR5kz3zY4m4GwOP-S?usp=sharing).
+   We provide some models for image SR (x4): CAT-A, CAT-R, and CAT-R-2. They can be downloaded from [CAT-A](https://www.sendgb.com/f2EBSUGTuZ0), [CAT-R](https://sendgb.com/A7E1r4SJIKg), and [CAT-R-2](https://sendgb.com/O9Y5vBkmTXU).
 
 2. Run the folloing scripts. The testing configuration is in 'options/Test'. More detail about YML, please refer to [Configuration](https://github.com/XPixelGroup/BasicSR/blob/master/docs/Config.md).
 

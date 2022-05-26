@@ -1,4 +1,4 @@
-The CAT pretrained models are available at [GoogleDrive](https://drive.google.com/drive/folders/1c6bI21dL5pOBJXSNR5kz3zY4m4GwOP-S?usp=sharing).
+The CAT pretrained models can be downloaded from [CAT-A](https://www.sendgb.com/f2EBSUGTuZ0), [CAT-R](https://sendgb.com/A7E1r4SJIKg), and [CAT-R-2](https://sendgb.com/O9Y5vBkmTXU).
 
 Place pretrained models in 'pretrained_models'.
 
