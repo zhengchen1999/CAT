@@ -37,7 +37,7 @@ This repository is for CAT introduced in the paper.
 
 1. Download DIV2K and Flickr2K training data from [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) and [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar).
 
-1. Package DIV2K and Flickr2K as DF2K (HR and LR_bicubic), and place them in '/datasets'.
+2. Package DIV2K and Flickr2K as DF2K (HR and LR_bicubic), and place them in '/datasets'.
 
    **You can change the training configuration in YML file, like 'train_CAT_A_sr_x4.yml'.**
 
@@ -52,9 +52,27 @@ This repository is for CAT introduced in the paper.
    PYTHONPATH="./:${PYTHONPATH}" CUDA_VISIBLE_DEVICES=0,1,2,3 python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_2_sr_x4.yml --launcher pytorch
    ```
 
-4. The training experiment is in 'experiments'.
+3. The training experiment is in 'experiments'.
+
+## Real-DN
+
+1. Download the partially trained model ([CAT-200K]()) and place it in 'experiments/pretrained_models'. 
+
+2. Download the [SIDD test](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view), and place it in '/datasets'. 
+
+3. Cd to 'real-DN'. Run the folloing scripts. The output is in 'results/Real_Denoising'.
+
+   ```shell
+   # test our CAT (200K/300K) on SSID
+   python test_real_denoising_sidd.py
+   ```
+
+4. Run the folloing scripts to reproduce PSNR/SSIM on SIDD (39.89 / 0.959).
+
+   ```shell
+   evaluate_sidd.m
+   ```
 
 ## Acknowledgements
 
-This code is built on  [BasicSR](https://github.com/XPixelGroup/BasicSR).
-
+This code is built on  [BasicSR](https://github.com/XPixelGroup/BasicSR) and [Restormer](https://github.com/swz30/Restormer).
