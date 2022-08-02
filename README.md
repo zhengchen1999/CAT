@@ -56,7 +56,7 @@ This repository is for CAT introduced in the paper.
 
 ## Real-DN
 
-1. Download the uncompleted trained model ([CAT-176K](https://ufile.io/mmhgoj6a)) (fininshed iterations = 176K, target total iterations = 300K) and place it in 'experiments/pretrained_models'.  
+1. Download the uncompleted trained model ([CAT-176K](https://ufile.io/hehet46n)) (fininshed iterations = 176K, target total iterations = 300K) and place it in 'experiments/pretrained_models'.  
 
 2. Download the [SIDD test](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view), and place it in '/datasets'. 
 
