@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(description='Real Image Denoising using Restorm
 
 parser.add_argument('--input_dir', default='../datasets/SIDD/', type=str, help='Directory of validation images')
 parser.add_argument('--result_dir', default='../results/Real_Denoising/SIDD/', type=str, help='Directory for results')
-parser.add_argument('--weights', default='../experiments/pretrained_models/CAT_240k.pth', type=str, help='Path to weights')
+parser.add_argument('--weights', default='../experiments/pretrained_models/CAT_176k.pth', type=str, help='Path to weights')
 
 args = parser.parse_args()
 
