@@ -56,14 +56,14 @@ This repository is for CAT introduced in the paper.
 
 ## Real-DN
 
-1. Download the partially trained model ([CAT-200K]()) and place it in 'experiments/pretrained_models'. 
+1. Download the partially trained model ([CAT-240K](https://ufile.io/mmhgoj6a)) and place it in 'experiments/pretrained_models'. 
 
 2. Download the [SIDD test](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view), and place it in '/datasets'. 
 
 3. Cd to 'real-DN'. Run the folloing scripts. The output is in 'results/Real_Denoising'.
 
    ```shell
-   # test our CAT (200K/300K) on SSID
+   # test our CAT (240K/300K) on SSID
    python test_real_denoising_sidd.py
    ```
 
