@@ -63,7 +63,7 @@ This repository is for CAT introduced in the paper.
 3. Cd to 'real-DN'. Run the folloing scripts. The output is in 'results/Real_Denoising'.
 
    ```shell
-   # test our CAT (176K/300K) on SSID
+   # test our CAT (uncompleted trained; fininshed iterations = 176K, target total iterations = 300K) on SSID
    python test_real_denoising_sidd.py
    ```
 
