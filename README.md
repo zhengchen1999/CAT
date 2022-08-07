@@ -56,18 +56,18 @@ This repository is for CAT introduced in the paper.
 
 ## Real-DN
 
-1. Download the uncompleted trained model ([CAT-176K](https://ufile.io/hehet46n)) (fininshed iterations = 176K, target total iterations = 300K) and place it in 'experiments/pretrained_models'.  
+1. Download the pretrained model ([CAT](https://ufile.io/30jw9xnm)) (completed trained; total iterations = 300K) and place it in 'experiments/pretrained_models'.  
 
 2. Download the [SIDD test](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view), and place it in '/datasets'. 
 
 3. Cd to 'real-DN'. Run the folloing scripts. The output is in 'results/Real_Denoising'.
 
    ```shell
-   # test our CAT (uncompleted trained; fininshed iterations = 176K, target total iterations = 300K) on SSID
+   # test our CAT (completed trained; total iterations = 300K) on SSID
    python test_real_denoising_sidd.py
    ```
 
-4. Run the folloing scripts to reproduce PSNR/SSIM on SIDD (39.89 / 0.959).
+4. Run the folloing scripts to reproduce PSNR/SSIM on SIDD (40.01 / 0.960).
 
    ```shell
    evaluate_sidd.m
