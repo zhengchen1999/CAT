@@ -91,7 +91,7 @@ Used training and testing sets can be downloaded as follows:
 
 - Download the pre-trained [models](https://drive.google.com/drive/folders/1Pd4tuE3f84aY5bcjR8KA5FshAT3-MXLB?usp=sharing) and place them in `experiments/pretrained_models/`.
 
-   We provide some models for image SR: CAT-R, CAT-A, CAT-A, and CAT-R-2 ($\times$2, $\times$3, $\times$4).
+   We provide some models for image SR: CAT-R, CAT-A, CAT-A, and CAT-R-2 (x2, x3, x4).
 
 - Run the folloing scripts. The testing configuration is in 'options/Test'.
 
@@ -123,7 +123,7 @@ Used training and testing sets can be downloaded as follows:
 
 - Download the pre-trained [models](https://drive.google.com/drive/folders/18414_dEErUhZyeHfWGaSa6PLesM3X3ie?usp=sharing) and place them in `experiments/pretrained_models/`.
 
-  We provide some models for JPEG compression artifact reduction: CAT ($q$10, $q$20, $q$30, $q$40).
+  We provide some models for JPEG compression artifact reduction: CAT (q10, q20, q30, q40).
 
 - Run the folloing scripts. The testing configuration is in 'options/Test'.
 
