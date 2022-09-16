@@ -35,7 +35,7 @@ Used training and testing sets can be downloaded as follows:
 
 ## Training
 
-### image SR
+### Image SR
 
 - Download training (DIV2K, Flickr2K) and testing (Set5, Set14, BSD100, Urban100, Manga109) datasets, place them in '/datasets'. 
 
