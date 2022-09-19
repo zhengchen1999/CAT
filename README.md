@@ -14,9 +14,18 @@ Zheng Chen, Yulun Zhang, Jinjin Gu, Yongbing Zhang, Linghe Kong, and Xin Yuan
 
 - See [INSTALL.md](INSTALL.md) for the installation of dependencies required to run Restormer.
 
+## TODO
+
+* [x] Image SR
+* [x] JPEG compression artifact reduction
+* [ ] Image Denoising
+* [ ] Image Deblurring
+* [ ] Image Deraining
+
 ## Contents
 
 1. [Datasets](#Datasets)
+1. [Models](#Models)
 1. [Training](#Training)
 1. [Testing](#Testing)
 1. [Results](#Results)
@@ -34,6 +43,20 @@ Used training and testing sets can be downloaded as follows:
 | :-------------------------------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | image SR                                      | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) | Set5 + Set14 + BSD100 + Urban100 + Manga109 [download all](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) | [here](https://drive.google.com/file/d/1VfeQx0_ThWEtkLsZyPGm4tD0w8SM1tou/view?usp=sharing) |
 | grayscale JPEG compression artifact reduction | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) + [BSD500](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz) (400 training&testing images) + [WED](http://ivc.uwaterloo.ca/database/WaterlooExploration/exploration_database_and_code.rar)(4744 images) | grayscale: Classic5 +LIVE + Urban100 [download all](https://drive.google.com/file/d/1cIBdCY99qORfUiMw8sK4lX1KihEGHrYG/view?usp=sharing) | [here](https://drive.google.com/file/d/1YlmySgU1gAdDcuS4fRRHIPpw78NrcMxF/view?usp=sharing) |
+
+## Models
+
+| Task | Method  | Params (M) | FLOPs (G) | PSNR  |  SSIM  |    Model Zoo     |  Visual Results  |
+| :--: | :------ | :--------: | :-------: | :---: | :----: | :--------------: | :--------------: |
+|  SR  | CAT-A   |   16.60    |   360.7   | 27.89 | 0.8339 | [Google Drive]() | [Google Drive]() |
+|  SR  | CAT-R   |   16.60    |   292.7   | 27.45 | 0.8254 | [Google Drive]() | [Google Drive]() |
+|  SR  | CAT-A-2 |   16.60    |   387.9   | 27.99 | 0.8357 | [Google Drive]() | [Google Drive]() |
+|  SR  | CAT-R-2 |   11.93    |   216.3   | 27.59 | 0.8285 | [Google Drive]() | [Google Drive]() |
+| CAR  | CAT     |            |           | 30.80 | 0.8875 | [Google Drive]() | [Google Drive]() |
+
+The performance are reported on Urban100 (x4, SR) and Urban100 (q=10, CAR). The test size of FLOPS is 128 x 128.
+
+
 
 ## Training
 
