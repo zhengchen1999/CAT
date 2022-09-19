@@ -49,17 +49,17 @@ Used training and testing sets can be downloaded as follows:
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_sr_x3.yml --launcher pytorch
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_sr_x4.yml --launcher pytorch
   
-  # CAT-R, SR (X4), input=64x64, output=256x256, 4 GPUs
+  # CAT-R, SR, input=64x64, output=256x256, 4 GPUs
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_sr_x2.yml --launcher pytorch
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_sr_x3.yml --launcher pytorch
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_sr_x4.yml --launcher pytorch
   
-  # CAT-R-2, SR (X4), input=64x64, output=256x256, 4 GPUs
+  # CAT-R-2, SR, input=64x64, output=256x256, 4 GPUs
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_2_sr_x2.yml --launcher pytorch
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_2_sr_x3.yml --launcher pytorch
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_2_sr_x4.yml --launcher pytorch
   
-  # CAT-A-2, SR (X4), input=64x64, output=256x256, 4 GPUs
+  # CAT-A-2, SR, input=64x64, output=256x256, 4 GPUs
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_2_sr_x2.yml --launcher pytorch
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_2_sr_x3.yml --launcher pytorch
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_2_sr_x4.yml --launcher pytorch
@@ -96,22 +96,22 @@ Used training and testing sets can be downloaded as follows:
 - Run the folloing scripts. The testing configuration is in 'options/Test'.
 
    ```shell
-   # CAT-R, SR (X4), produces results in Table 2 of the main paper
+   # CAT-R, SR, produces results in Table 2 of the main paper
    python basicsr/test.py -opt options/Test/test_CAT_R_sr_x2.yml
    python basicsr/test.py -opt options/Test/test_CAT_R_sr_x3.yml
    python basicsr/test.py -opt options/Test/test_CAT_R_sr_x4.yml
    
-   # CAT-A, SR (X4), produces results in Table 2 of the main paper
+   # CAT-A, SR, produces results in Table 2 of the main paper
    python basicsr/test.py -opt options/Test/test_CAT_A_sr_x2.yml
    python basicsr/test.py -opt options/Test/test_CAT_A_sr_x3.yml
    python basicsr/test.py -opt options/Test/test_CAT_A_sr_x4.yml
    
-   # CAT-R-2, SR (X4), produces results in Table 1 of the supplementary material
+   # CAT-R-2, SR, produces results in Table 1 of the supplementary material
    python basicsr/test.py -opt options/Test/test_CAT_R_2_sr_x2.yml
    python basicsr/test.py -opt options/Test/test_CAT_R_2_sr_x3.yml
    python basicsr/test.py -opt options/Test/test_CAT_R_2_sr_x4.yml
    
-   # CAT-A-2, SR (X4), produces results in Table 1 of the supplementary material
+   # CAT-A-2, SR, produces results in Table 1 of the supplementary material
    python basicsr/test.py -opt options/Test/test_CAT_A_2_sr_x2.yml
    python basicsr/test.py -opt options/Test/test_CAT_A_2_sr_x3.yml
    python basicsr/test.py -opt options/Test/test_CAT_A_2_sr_x4.yml
@@ -128,7 +128,7 @@ Used training and testing sets can be downloaded as follows:
 - Run the folloing scripts. The testing configuration is in 'options/Test'.
 
   ```shell
-  # CAT-A, SR (X4), produces results in Table 3 of the main paper
+  # CAT-A, SR, produces results in Table 3 of the main paper
   python basicsr/test.py -opt options/Test/test_CAT_car_q10.yml
   python basicsr/test.py -opt options/Test/test_CAT_car_q20.yml
   python basicsr/test.py -opt options/Test/test_CAT_car_q30.yml
@@ -157,7 +157,7 @@ Used training and testing sets can be downloaded as follows:
 
 ## Citation
 
-    
+​    
 
 ## Acknowledgements
 
