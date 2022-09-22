@@ -1,0 +1,65 @@
+# general settings
+name: test_CAR_q40
+model_type: CATModle
+scale: 1
+num_gpu: 1
+manual_seed: 10
+
+datasets:
+  test_1:  # the 1st test dataset
+    task: CAR
+    name: Classic5
+    type: PairedImageDataset
+    dataroot_gt: datasets/CAR/test/classic5/Classic5_HQ
+    dataroot_lq: datasets/CAR/test/classic5/Classic5_LQ/40
+    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+
+  test_2:  # the 2st test dataset
+    task: CAR
+    name: LIVE1
+    type: PairedImageDataset
+    dataroot_gt: datasets/CAR/test/LIVE1/LIVE1_HQ
+    dataroot_lq: datasets/CAR/test/LIVE1/LIVE1_LQ/40
+    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+
+
+# network structures
+network_g:
+  type: CAT
+  upscale: 1
+  in_chans: 1
+  img_size: 128
+  split_size_0: [2,2,2,4,4,4]
+  split_size_1: [0,0,0,0,0,0] # The other side is H or W
+  img_range: 255.
+  depth: [6,6,6,6,6,6]
+  embed_dim: 180
+  num_heads: [6,6,6,6,6,6]
+  mlp_ratio: 4
+  resi_connection: '1conv'
+  block_name: 'CATB_axial'
+
+# path
+path:
+  pretrain_network_g: experiments/pretrained_models/CAR/CAR_CAT_q40.pth
+  strict_load_g: True
+
+# validation settings
+val:
+  save_img: False
+  suffix: ~  # add suffix to saved images, if None, use exp name
+  use_chop: True
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: True
+    ssim:
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: True
