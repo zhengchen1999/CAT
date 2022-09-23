@@ -224,9 +224,6 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 ## Citation
 
-<<<<<<< HEAD
-
-=======
 If you find the code helpful in your resarch or work, please cite the following paper(s).
 ```
 @inproceedings{chen2022cross,
@@ -235,8 +232,7 @@ If you find the code helpful in your resarch or work, please cite the following 
     booktitle={NeurIPS},
     year={2022}
 }
-```    
->>>>>>> 5b51cdeef00cbd9d3553676a3af9cf5e525f2325
+```
 
 ## Acknowledgements
 
