@@ -181,13 +181,15 @@ class Attention_axial(nn.Module):
             # generate mother-set
             position_bias_h = torch.arange(1 - self.H_sp, self.H_sp, device=attn.device)
             position_bias_w = torch.arange(1 - self.W_sp, self.W_sp, device=attn.device)
-            biases = torch.stack(torch.meshgrid([position_bias_h, position_bias_w], indexing='ij'))
+            biases = torch.stack(torch.meshgrid([position_bias_h, position_bias_w], indexing='ij')) # for pytorch >= 1.10
+            # biases = torch.stack(torch.meshgrid([position_bias_h, position_bias_w])) # for pytorch < 1.10
             biases = biases.flatten(1).transpose(0, 1).contiguous().float()
 
             # get pair-wise relative position index for each token inside the window
             coords_h = torch.arange(self.H_sp, device=attn.device)
             coords_w = torch.arange(self.W_sp, device=attn.device)
-            coords = torch.stack(torch.meshgrid([coords_h, coords_w], indexing='ij'))
+            coords = torch.stack(torch.meshgrid([coords_h, coords_w], indexing='ij')) # for pytorch >= 1.10
+            # coords = torch.stack(torch.meshgrid([coords_h, coords_w])) # for pytorch < 1.10
             coords_flatten = torch.flatten(coords, 1)
             relative_coords = coords_flatten[:, :, None] - coords_flatten[:, None, :]
             relative_coords = relative_coords.permute(1, 2, 0).contiguous()

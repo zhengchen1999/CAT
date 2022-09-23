@@ -11,8 +11,8 @@ datasets:
     task: CAR
     name: DIV2K+Flickr2K+WED+BSD400
     type: PairedImageDataset
-    dataroot_gt: datasets/CAR/Y/DIV2K_HQ
-    dataroot_lq: datasets/CAR/Y/DIV2K_LQ/40
+    dataroot_gt: datasets/CAR/DFWB_HQ
+    dataroot_lq: datasets/CAR/DFWB_LQ/40
     filename_tmpl: '{}'
     io_backend:
       type: disk
@@ -32,8 +32,8 @@ datasets:
     task: CAR
     name: Classic5
     type: PairedImageDataset
-    dataroot_gt: datasets/CAR/test/classic5/Classic5_HQ
-    dataroot_lq: datasets/CAR/test/classic5/Classic5_LQ/40
+    dataroot_gt: datasets/CAR/classic5/Classic5_HQ
+    dataroot_lq: datasets/CAR/classic5/Classic5_LQ/40
     filename_tmpl: '{}'
     io_backend:
       type: disk

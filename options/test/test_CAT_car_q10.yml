@@ -1,5 +1,5 @@
 # general settings
-name: test_CAR_q30
+name: test_CAR_q10
 model_type: CATModle
 scale: 1
 num_gpu: 1
@@ -10,8 +10,8 @@ datasets:
     task: CAR
     name: Classic5
     type: PairedImageDataset
-    dataroot_gt: datasets/CAR/test/classic5/Classic5_HQ
-    dataroot_lq: datasets/CAR/test/classic5/Classic5_LQ/30
+    dataroot_gt: datasets/CAR/classic5/Classic5_HQ
+    dataroot_lq: datasets/CAR/classic5/Classic5_LQ/10
     filename_tmpl: '{}'
     io_backend:
       type: disk
@@ -20,8 +20,8 @@ datasets:
     task: CAR
     name: LIVE1
     type: PairedImageDataset
-    dataroot_gt: datasets/CAR/test/LIVE1/LIVE1_HQ
-    dataroot_lq: datasets/CAR/test/LIVE1/LIVE1_LQ/30
+    dataroot_gt: datasets/CAR/LIVE1/LIVE1_HQ
+    dataroot_lq: datasets/CAR/LIVE1/LIVE1_LQ/10
     filename_tmpl: '{}'
     io_backend:
       type: disk
@@ -45,7 +45,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: experiments/pretrained_models/CAR/CAR_CAT_q30.pth
+  pretrain_network_g: experiments/pretrained_models/CAR/CAR_CAT_q10.pth
   strict_load_g: True
 
 # validation settings
