@@ -180,7 +180,15 @@ The performance are reported on Urban100 (x4, SR) and Urban100 (q=10, CAR). The 
 
 ## Citation
 
-​    
+If you find the code helpful in your resarch or work, please cite the following paper(s).
+```
+@inproceedings{chen2022cross,
+    title={Cross Aggregation Transformer for Image Restoration},
+    author={Chen, Zheng and Zhang, Yulun and Gu, Jinjin and Zhang, Yongbing and Kong, Linghe and Yuan, Xin},
+    booktitle={NeurIPS},
+    year={2022}
+}
+```    
 
 ## Acknowledgements
 
