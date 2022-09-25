@@ -106,6 +106,21 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
   
 - The training experiment is in 'experiments'.
 
+### Real Image Denoising
+
+- Cd to 'Restormer'. For real image denoising, we train CAT directly with [Restormer](https://github.com/swz30/Restormer) as the codebase.
+
+- Download training ([SIDD](https://drive.google.com/file/d/1UHjWZzLPGweA9ZczmV8lFSRcIxqiOVJw/view?usp=sharing)) datasets, place them in '/datasets' ('Restormer/datasets').
+
+- Run the folloing scripts. The testing configuration is in 'options' ('Restormer/options').
+
+  ```shell
+  # CAT, CAR, Progressive Learning, 8 GPUs
+  python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train_RealDenoising_CAT.yml --launcher pytorch
+  ```
+
+- The training experiment is in 'experiments' ('Restormer/experiments').
+
 ## Testing
 
 ### Image SR
