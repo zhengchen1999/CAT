@@ -39,8 +39,7 @@ For training and testing, recollect all datasets as the following form:
             |-- LR_bicubic
                 |-- X2
                 |-- X3
-                |-- X4     
-                
+                |-- X4        
     # grayscale JPEG compression artifact reduction - train & test
     |-- CAR
         |-- DFWB_HQ
