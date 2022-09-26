@@ -110,7 +110,11 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 - Cd to 'Restormer'. For real image denoising, we train CAT directly with [Restormer](https://github.com/swz30/Restormer) as the codebase.
 
-- Download training ([SIDD](https://drive.google.com/file/d/1UHjWZzLPGweA9ZczmV8lFSRcIxqiOVJw/view?usp=sharing)) datasets, place them in '/datasets' ('Restormer/datasets').
+- Download training ([SIDD train](https://drive.google.com/file/d/1UHjWZzLPGweA9ZczmV8lFSRcIxqiOVJw/view?usp=sharing)) datasets and val ([SIDD val](https://drive.google.com/file/d/1Fw6Ey1R-nCHN9WEpxv0MnMqxij-ECQYJ/view?usp=sharing)) datasets. Unzip and place SIDD train in '/datasets/Dowloads' ('Restormer/datasets/Dowloads'). Run the folloing scripts to generate image patches. Place SIDD val in '/datasets'. ('Restormer/datasets')
+
+  ```shell
+  python generate_patches_sidd.py 
+  ```
 
 - Run the folloing scripts. The testing configuration is in 'options' ('Restormer/options').
 

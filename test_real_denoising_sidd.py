@@ -14,7 +14,7 @@ from skimage import img_as_ubyte
 
 parser = argparse.ArgumentParser(description='Real Image Denoising using CAT')
 
-parser.add_argument('--input_dir', default='datasets/real-DN/SIDD/', type=str, help='Directory of validation images')
+parser.add_argument('--input_dir', default='datasets/test/SIDD/', type=str, help='Directory of validation images')
 parser.add_argument('--result_dir', default='results/test_CAT_Real_DN/SIDD/', type=str, help='Directory for results')
 parser.add_argument('--weights', default='experiments/pretrained_models/Real-DN/Real_DN_CAT.pth', type=str, help='Path to weights')
 parser.add_argument('--save_images', action='store_true', help='Save denoised images in result directory')
