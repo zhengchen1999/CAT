@@ -12,11 +12,9 @@ Zheng Chen, Yulun Zhang, Jinjin Gu, Yongbing Zhang, Linghe Kong, and Xin Yuan, "
 
 ## Dependencies
 
-This codebase implementation is based on BasicSR which is open source.
-
 - python 3.8
 - pyTorch >= 1.8.0
-- [BasicSR](https://github.com/XPixelGroup/BasicSR) and [Restormer](https://github.com/swz30/Restormer)
+- NVIDIA GPU + [CUDA](https://developer.nvidia.com/cuda-downloads)
 
 ```bash
 pip install -r requirements.txt
