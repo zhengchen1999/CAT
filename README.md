@@ -73,7 +73,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 - Download training ([DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/), [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar)) and testing ([Set5, Set14, BSD100, Urban100, Manga109](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing)) datasets, place them in '/datasets'.
 
-- Run the folloing scripts. The testing configuration is in 'options/train'.
+- Run the folloing scripts. The training configuration is in 'options/train'.
 
   ```shell
   # CAT-R, SR, input=64x64, output=256x256, 4 GPUs
