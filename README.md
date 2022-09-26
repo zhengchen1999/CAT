@@ -52,6 +52,8 @@ Used training and testing sets can be downloaded as follows:
 | grayscale JPEG compression artifact reduction | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) + [BSD500](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz) (400 training&testing images) + [WED](http://ivc.uwaterloo.ca/database/WaterlooExploration/exploration_database_and_code.rar)(4744 images) | grayscale: Classic5 +LIVE + Urban100 [download all](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) | [here](https://drive.google.com/drive/folders/1xwBMPRUIAnpjAynEr9GI8Wenl6D-J8i3?usp=sharing) |
 | real image denoising                          | [SIDD](https://drive.google.com/file/d/1UHjWZzLPGweA9ZczmV8lFSRcIxqiOVJw/view?usp=sharing) (320 training images) | [SIDD](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view?usp=sharing) + [DND](https://drive.google.com/file/d/1CYCDhaVxYYcXhSfEVDUwkvJDtGxeQ10G/view?usp=sharing) | [here](https://drive.google.com/drive/folders/14chIIFh6uG4M-aOyJcu6mYjDIpm4zE5t?usp=sharing) |
 
+Download training and testing datasets and put them into the corresponding folders of `datasets/` and `Restormer/datasets`. See [datasets](datasets/README.md) for the collection form.
+
 ## Models
 
 |  Task   | Method  | Params (M) | FLOPs (G) | Dataset  | PSNR  |  SSIM  |                          Model Zoo                           |                        Visual Results                        |
