@@ -12,7 +12,16 @@ Zheng Chen, Yulun Zhang, Jinjin Gu, Yongbing Zhang, Linghe Kong, and Xin Yuan, "
 
 ## Dependencies
 
-- See [INSTALL.md](INSTALL.md) for the installation of dependencies required to run Restormer.
+This codebase implementation is based on BasicSR which is open source.
+
+- python 3.8
+- pyTorch >= 1.8.0
+- [BasicSR](https://github.com/XPixelGroup/BasicSR) and [Restormer](https://github.com/swz30/Restormer)
+
+```bash
+pip install -r requirements.txt
+python setup.py develop
+```
 
 ## TODO
 
@@ -119,9 +128,14 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 - Run the folloing scripts. The testing configuration is in 'options' ('Restormer/options').
 
   ```shell
+  # Set up the environment for Restormer (only for real image denoising training)
+  python setup.py develop --no_cuda_ext
+  
   # CAT, CAR, Progressive Learning, 8 GPUs
   python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train_RealDenoising_CAT.yml --launcher pytorch
   ```
+
+  run `python setup.py develop` to re-set the environment for BasicSR.
 
 - The training experiment is in 'experiments' ('Restormer/experiments').
 

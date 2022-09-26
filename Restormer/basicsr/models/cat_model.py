@@ -178,7 +178,6 @@ class CATModel_Unet(BaseModel):
         patch_size2 = max(self.opt['network_g']['split_size_1'])
         patch_size = max(patch_size1, patch_size2)
         patch_size = patch_size * window_size
-        # print(self.lq.size())
         scale = self.opt.get('scale', 1)
         mod_pad_h, mod_pad_w = 0, 0
         _, _, h, w = self.lq.size()
@@ -186,21 +185,10 @@ class CATModel_Unet(BaseModel):
             mod_pad_h = patch_size - h % patch_size
         if w % patch_size != 0:
             mod_pad_w = patch_size - w % patch_size
-        # img = F.pad(self.lq, (0, mod_pad_w, 0, mod_pad_h), 'reflect')
-        # 修改（按源码）
         img = self.lq
         img = torch.cat([img, torch.flip(img, [2])], 2)[:, :, :h+mod_pad_h, :]
         img = torch.cat([img, torch.flip(img, [3])], 3)[:, :, :, :w+mod_pad_w]
-                
-        # scale = self.opt.get('scale', 1)
-        # mod_pad_h, mod_pad_w = 0, 0
-        # _, _, h, w = self.lq.size()
-        # if h % window_size != 0:
-        #     mod_pad_h = window_size - h % window_size
-        # if w % window_size != 0:
-        #     mod_pad_w = window_size - w % window_size
-        # img = F.pad(self.lq, (0, mod_pad_w, 0, mod_pad_h), 'reflect')
-
+        
         self.nonpad_test(img)
         _, _, h, w = self.output.size()
         self.output = self.output[:, :, 0:h - mod_pad_h * scale, 0:w - mod_pad_w * scale]
