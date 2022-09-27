@@ -48,9 +48,11 @@ Used training and testing sets can be downloaded as follows:
 
 | Task                                          |                         Training Set                         |                         Testing Set                          |                        Visual Results                        |
 | :-------------------------------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| image SR                                      | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) | Set5 + Set14 + BSD100 + Urban100 + Manga109 [download all](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) | [here](https://drive.google.com/drive/folders/122LBzNSuc-YwzyTzA2VL9mXSJPWBxICZ?usp=sharing) |
-| grayscale JPEG compression artifact reduction | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) + [BSD500](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz) (400 training&testing images) + [WED](http://ivc.uwaterloo.ca/database/WaterlooExploration/exploration_database_and_code.rar)(4744 images) | grayscale: Classic5 +LIVE + Urban100 [download all](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) | [here](https://drive.google.com/drive/folders/1xwBMPRUIAnpjAynEr9GI8Wenl6D-J8i3?usp=sharing) |
-| real image denoising                          | [SIDD](https://drive.google.com/file/d/1UHjWZzLPGweA9ZczmV8lFSRcIxqiOVJw/view?usp=sharing) (320 training images) | [SIDD](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view?usp=sharing) + [DND](https://drive.google.com/file/d/1CYCDhaVxYYcXhSfEVDUwkvJDtGxeQ10G/view?usp=sharing) | [here](https://drive.google.com/drive/folders/14chIIFh6uG4M-aOyJcu6mYjDIpm4zE5t?usp=sharing) |
+| image SR                                      | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) [complete training dataset [DF2K](https://drive.google.com/drive/folders/1gWq-2fE_9cBa0fwXVjKY5GPIqJ09cgG3?usp=sharing)] | Set5 + Set14 + BSD100 + Urban100 + Manga109 [complete training dataset [download](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing)] | [here](https://drive.google.com/drive/folders/122LBzNSuc-YwzyTzA2VL9mXSJPWBxICZ?usp=sharing) |
+| grayscale JPEG compression artifact reduction | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) + [BSD500](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz) (400 training&testing images) + [WED](http://ivc.uwaterloo.ca/database/WaterlooExploration/exploration_database_and_code.rar)(4744 images) [complete training dataset [DFBW](https://drive.google.com/drive/folders/1ro_Rh64xGae6h7i_FUJV3UzcQZnqlEob?usp=sharing)] | grayscale: Classic5 +LIVE + Urban100 [complete training dataset [download](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing)] | [here](https://drive.google.com/drive/folders/1xwBMPRUIAnpjAynEr9GI8Wenl6D-J8i3?usp=sharing) |
+| real image denoising                          | [SIDD](https://drive.google.com/file/d/1UHjWZzLPGweA9ZczmV8lFSRcIxqiOVJw/view?usp=sharing) (320 training images) [complete training dataset [SIDD](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing)] | [SIDD](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view?usp=sharing) + [DND](https://drive.google.com/file/d/1CYCDhaVxYYcXhSfEVDUwkvJDtGxeQ10G/view?usp=sharing) [complete training dataset [download](https://drive.google.com/drive/folders/1EYrJjnFi2S91pI-QaSh85gemS02H-pV6?usp=sharing)] | [here](https://drive.google.com/drive/folders/14chIIFh6uG4M-aOyJcu6mYjDIpm4zE5t?usp=sharing) |
+
+Here the visual results are generated under SR (x4), JPEG compression artifact reduction (q10), and real image denoising.
 
 Download training and testing datasets and put them into the corresponding folders of `datasets/` and `Restormer/datasets`. See [datasets](datasets/README.md) for the collection form.
 
@@ -71,9 +73,16 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 ### Image SR
 
-- Download training ([DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/), [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar)) and testing ([Set5, Set14, BSD100, Urban100, Manga109](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing)) datasets, place them in '/datasets'.
+- Cd to 'BasicSR' and run the setup script
 
-- Run the folloing scripts. The training configuration is in 'options/train'.
+  ```shell
+  # If already in BasicSR and set up, please ignore
+  python setup.py develop
+  ```
+
+- Download [training](https://drive.google.com/drive/folders/1gWq-2fE_9cBa0fwXVjKY5GPIqJ09cgG3?usp=sharing) (DF2K, already processed) and [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109) datasets, place them in `datasets/`.
+
+- Run the folloing scripts. The training configuration is in `options/train/`.
 
   ```shell
   # CAT-R, SR, input=64x64, output=256x256, 4 GPUs
@@ -97,13 +106,20 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_2_sr_x4.yml --launcher pytorch
   ```
 
-- The training experiment is in 'experiments'.
+- The training experiment is in `experiments/`.
 
 ### JPEG Compression Artifact Reduction
 
-- Download training ([DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/), [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar), [BSD500](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz), [WED](http://ivc.uwaterloo.ca/database/WaterlooExploration/exploration_database_and_code.rar)) and testing ([Classic5, LIVE, Urban100](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing)) datasets, place them in '/datasets'.
+- Cd to 'BasicSR' and run the setup script
 
-- Run the folloing scripts. The testing configuration is in 'options/train'.
+  ```shell
+  # If already in BasicSR and set up, please ignore
+  python setup.py develop
+  ```
+
+- Download [training](https://drive.google.com/drive/folders/1ro_Rh64xGae6h7i_FUJV3UzcQZnqlEob?usp=sharing) (DFBW, already processed) and [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) datasets, place them in `datasets/`.
+
+- Run the folloing scripts. The training configuration is in `options/train/`.
 
   ```shell
   # CAT, CAR, input=128x128, output=128x128, 4 GPUs
@@ -113,43 +129,48 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_car_q40.yml --launcher pytorch
   ```
   
-- The training experiment is in 'experiments'.
+- The training experiment is in `experiments/`.
 
 ### Real Image Denoising
 
-- Cd to 'Restormer'. For real image denoising, we train CAT directly with [Restormer](https://github.com/swz30/Restormer) as the codebase.
-
-- Download training ([SIDD train](https://drive.google.com/file/d/1UHjWZzLPGweA9ZczmV8lFSRcIxqiOVJw/view?usp=sharing)) datasets and val ([SIDD val](https://drive.google.com/file/d/1Fw6Ey1R-nCHN9WEpxv0MnMqxij-ECQYJ/view?usp=sharing)) datasets. Unzip and place SIDD train in '/datasets/Dowloads' ('Restormer/datasets/Dowloads'). Run the folloing scripts to generate image patches. Place SIDD val in '/datasets'. ('Restormer/datasets')
+- Cd to 'already' and run the setup script
 
   ```shell
-  python generate_patches_sidd.py 
+  # If already in Restormer and set up, please ignore
+  python setup.py develop --no_cuda_ext
   ```
 
-- Run the folloing scripts. The testing configuration is in 'options' ('Restormer/options').
+- Download [training](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing) (SIDD-train), [val](https://drive.google.com/file/d/1Fw6Ey1R-nCHN9WEpxv0MnMqxij-ECQYJ/view?usp=sharing) (SIDD-val), and [test](https://drive.google.com/drive/folders/1EYrJjnFi2S91pI-QaSh85gemS02H-pV6?usp=sharing) (SIDD-test, DND) datasets, place them in `datasets/` (`Restormer/datasets/`).
+
+- Run the folloing scripts. The training configuration is in `options/` (`Restormer/options/`).
 
   ```shell
-  # Set up the environment for Restormer (only for real image denoising training)
-  python setup.py develop --no_cuda_ext
-  
   # CAT, CAR, Progressive Learning, 8 GPUs
   python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train_RealDenoising_CAT.yml --launcher pytorch
   ```
 
   run `python setup.py develop` to re-set the environment for BasicSR.
 
-- The training experiment is in 'experiments' ('Restormer/experiments').
+- The training experiment is in `experiments/` (`Restormer/experiments/`).
 
 ## Testing
 
 ### Image SR
 
+- Cd to 'BasicSR' and run the setup script
+
+   ```shell
+   # If already in BasicSR and set up, please ignore
+   python setup.py develop
+   ```
+
 - Download the pre-trained [models](https://drive.google.com/drive/folders/1Pd4tuE3f84aY5bcjR8KA5FshAT3-MXLB?usp=sharing) and place them in `experiments/pretrained_models/`.
 
    We provide some models for image SR: CAT-R, CAT-A, CAT-A, and CAT-R-2 (x2, x3, x4).
 
-- Download testing ([Set5, Set14, BSD100, Urban100, Manga109](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing)) datasets, place them in '/datasets'.
+- Download [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109) datasets, place them in `datasets/`.
 
-- Run the folloing scripts. The testing configuration is in 'options/test'.
+- Run the folloing scripts. The testing configuration is in `options/test/`.
 
    ```shell
    # CAT-R, SR, produces results in Table 2 of the main paper
@@ -173,17 +194,24 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
    python basicsr/test.py -opt options/Test/test_CAT_A_2_sr_x4.yml
    ```
 
-- The output is in 'results'.
+- The output is in `results/`.
 
 ### JPEG Compression Artifact Reduction
+
+- Cd to 'BasicSR' and run the setup script
+
+  ```shell
+  # If already in BasicSR and set up, please ignore
+  python setup.py develop
+  ```
 
 - Download the pre-trained [models](https://drive.google.com/drive/folders/18414_dEErUhZyeHfWGaSa6PLesM3X3ie?usp=sharing) and place them in `experiments/pretrained_models/`.
 
   We provide some models for JPEG compression artifact reduction: CAT (q10, q20, q30, q40).
 
-- Download testing ([Classic5, LIVE, Urban100](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing)) datasets, place them in '/datasets'.
+- Download [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) (Classic5, LIVE, Urban100) datasets, place them in `datasets/`.
 
-- Run the folloing scripts. The testing configuration is in 'options/test'.
+- Run the folloing scripts. The testing configuration is in `options/test/`.
 
   ```shell
   # CAT-A, SR, produces results in Table 3 of the main paper
@@ -193,13 +221,20 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
   python basicsr/test.py -opt options/Test/test_CAT_car_q40.yml
   ```
 
-- The output is in 'results'.
+- The output is in `results/`.
 
 ### Real Image Denoising
 
+- Cd to 'BasicSR' and run the setup script
+
+  ```shell
+  # If already in BasicSR and set up, please ignore
+  python setup.py develop
+  ```
+
 - Download the pre-trained [models](https://drive.google.com/drive/folders/1rkNeKeGiZqKit0M_AxFx1yfGu6z1ahgc?usp=sharing) and place them in `experiments/pretrained_models/`.
 
-- Download testing ([SIDD](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view?usp=sharing), [DND](https://drive.google.com/file/d/1CYCDhaVxYYcXhSfEVDUwkvJDtGxeQ10G/view?usp=sharing)) datasets, place them in '/datasets'.
+- Download [testing](https://drive.google.com/drive/folders/1EYrJjnFi2S91pI-QaSh85gemS02H-pV6?usp=sharing) (SIDD, DND) datasets, place them in `datasets/`.
 
 - Run the folloing scripts.
 
@@ -213,7 +248,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
   python test_real_denoising_dnd.py --save_images
   ```
 
-- The output is in 'results'.
+- The output is in `results/`.
 
 ## Results
 
