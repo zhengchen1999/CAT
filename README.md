@@ -80,7 +80,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
   python setup.py develop
   ```
 
-- Download [training](https://drive.google.com/drive/folders/1gWq-2fE_9cBa0fwXVjKY5GPIqJ09cgG3?usp=sharing) (DF2K, already processed) and [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109) datasets, place them in `datasets/`.
+- Download [training](https://drive.google.com/drive/folders/1gWq-2fE_9cBa0fwXVjKY5GPIqJ09cgG3?usp=sharing) (DF2K, already processed) and [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109, already processed) datasets, place them in `datasets/`.
 
 - Run the folloing scripts. The training configuration is in `options/train/`.
 
@@ -117,7 +117,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
   python setup.py develop
   ```
 
-- Download [training](https://drive.google.com/drive/folders/1ro_Rh64xGae6h7i_FUJV3UzcQZnqlEob?usp=sharing) (DFBW, already processed) and [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) datasets, place them in `datasets/`.
+- Download [training](https://drive.google.com/drive/folders/1ro_Rh64xGae6h7i_FUJV3UzcQZnqlEob?usp=sharing) (DFBW, already processed) and [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) (Classic5, LIVE1, Urban100, already processed) datasets, place them in `datasets/`.
 
 - Run the folloing scripts. The training configuration is in `options/train/`.
 
@@ -140,7 +140,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
   python setup.py develop --no_cuda_ext
   ```
 
-- Download [training](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing) (SIDD-train), [val](https://drive.google.com/file/d/1Fw6Ey1R-nCHN9WEpxv0MnMqxij-ECQYJ/view?usp=sharing) (SIDD-val), and [test](https://drive.google.com/drive/folders/1EYrJjnFi2S91pI-QaSh85gemS02H-pV6?usp=sharing) (SIDD-test, DND) datasets, place them in `datasets/` (`Restormer/datasets/`).
+- Download [training](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing) (SIDD-train, already processed), [val](https://drive.google.com/file/d/1Fw6Ey1R-nCHN9WEpxv0MnMqxij-ECQYJ/view?usp=sharing) (SIDD-val), and [test](https://drive.google.com/drive/folders/1EYrJjnFi2S91pI-QaSh85gemS02H-pV6?usp=sharing) (SIDD-test, DND) datasets, place them in `datasets/` (`Restormer/datasets/`).
 
 - Run the folloing scripts. The training configuration is in `options/` (`Restormer/options/`).
 
@@ -168,7 +168,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
    We provide some models for image SR: CAT-R, CAT-A, CAT-A, and CAT-R-2 (x2, x3, x4).
 
-- Download [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109) datasets, place them in `datasets/`.
+- Download [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109, already processed) datasets, place them in `datasets/`.
 
 - Run the folloing scripts. The testing configuration is in `options/test/`.
 
@@ -209,7 +209,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
   We provide some models for JPEG compression artifact reduction: CAT (q10, q20, q30, q40).
 
-- Download [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) (Classic5, LIVE, Urban100) datasets, place them in `datasets/`.
+- Download [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) (Classic5, LIVE, Urban100, already processed) datasets, place them in `datasets/`.
 
 - Run the folloing scripts. The testing configuration is in `options/test/`.
 
