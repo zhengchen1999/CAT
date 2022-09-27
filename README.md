@@ -17,6 +17,7 @@ Zheng Chen, Yulun Zhang, Jinjin Gu, Yongbing Zhang, Linghe Kong, and Xin Yuan, "
 - NVIDIA GPU + [CUDA](https://developer.nvidia.com/cuda-downloads)
 
 ```bash
+git clone https://github.com/zhengchen1999/CAT.git
 pip install -r requirements.txt
 python setup.py develop
 ```
