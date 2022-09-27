@@ -73,10 +73,10 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 ### Image SR
 
-- Cd to 'BasicSR' and run the setup script
+- Cd to 'CAT' and run the setup script.
 
   ```shell
-  # If already in BasicSR and set up, please ignore
+  # If already in CAT and set up, please ignore
   python setup.py develop
   ```
 
@@ -110,10 +110,10 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 ### JPEG Compression Artifact Reduction
 
-- Cd to 'BasicSR' and run the setup script
+- Cd to 'CAT' and run the setup script
 
   ```shell
-  # If already in BasicSR and set up, please ignore
+  # If already in CAT and set up, please ignore
   python setup.py develop
   ```
 
@@ -133,7 +133,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 ### Real Image Denoising
 
-- Cd to 'already' and run the setup script
+- Cd to 'CAT/Restormer' and run the setup script
 
   ```shell
   # If already in Restormer and set up, please ignore
@@ -145,7 +145,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 - Run the folloing scripts. The training configuration is in `options/` (`Restormer/options/`).
 
   ```shell
-  # CAT, CAR, Progressive Learning, 8 GPUs
+  # CAT, Real DN, Progressive Learning, 8 GPUs
   python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train_RealDenoising_CAT.yml --launcher pytorch
   ```
 
@@ -157,10 +157,10 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 ### Image SR
 
-- Cd to 'BasicSR' and run the setup script
+- Cd to 'CAT' and run the setup script
 
    ```shell
-   # If already in BasicSR and set up, please ignore
+   # If already in CAT and set up, please ignore
    python setup.py develop
    ```
 
@@ -198,10 +198,10 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 ### JPEG Compression Artifact Reduction
 
-- Cd to 'BasicSR' and run the setup script
+- Cd to 'CAT' and run the setup script
 
   ```shell
-  # If already in BasicSR and set up, please ignore
+  # If already in CAT and set up, please ignore
   python setup.py develop
   ```
 
@@ -225,10 +225,10 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 ### Real Image Denoising
 
-- Cd to 'BasicSR' and run the setup script
+- Cd to 'CAT' and run the setup script
 
   ```shell
-  # If already in BasicSR and set up, please ignore
+  # If already in CAT and set up, please ignore
   python setup.py develop
   ```
 
@@ -239,7 +239,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 - Run the folloing scripts.
 
   ```shell
-  # CAT, real-DN, produces results in Table 4 of the main paper
+  # CAT, real DN, produces results in Table 4 of the main paper
   # testing on SIDD
   python test_real_denoising_sidd.py --save_images
   evaluate_sidd.m
