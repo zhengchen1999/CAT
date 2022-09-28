@@ -50,7 +50,7 @@ Used training and testing sets can be downloaded as follows:
 | Task                                          |                         Training Set                         |                         Testing Set                          |                        Visual Results                        |
 | :-------------------------------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | image SR                                      | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) [complete training dataset [DF2K](https://drive.google.com/drive/folders/1gWq-2fE_9cBa0fwXVjKY5GPIqJ09cgG3?usp=sharing)] | Set5 + Set14 + BSD100 + Urban100 + Manga109 [complete testing dataset [download](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing)] | [here](https://drive.google.com/drive/folders/122LBzNSuc-YwzyTzA2VL9mXSJPWBxICZ?usp=sharing) |
-| grayscale JPEG compression artifact reduction | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) + [BSD500](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz) (400 training&testing images) + [WED](http://ivc.uwaterloo.ca/database/WaterlooExploration/exploration_database_and_code.rar)(4744 images) [complete training dataset [DFBW](https://drive.google.com/drive/folders/1ro_Rh64xGae6h7i_FUJV3UzcQZnqlEob?usp=sharing)] | grayscale: Classic5 +LIVE + Urban100 [complete testing dataset [download](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing)] | [here](https://drive.google.com/drive/folders/1xwBMPRUIAnpjAynEr9GI8Wenl6D-J8i3?usp=sharing) |
+| grayscale JPEG compression artifact reduction | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) + [BSD500](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz) (400 training&testing images) + [WED](http://ivc.uwaterloo.ca/database/WaterlooExploration/exploration_database_and_code.rar)(4744 images) [complete training dataset [DFBW](https://drive.google.com/drive/folders/1ro_Rh64xGae6h7i_FUJV3UzcQZnqlEob?usp=sharing)] | Classic5 +LIVE + Urban100 [complete testing dataset [download](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing)] | [here](https://drive.google.com/drive/folders/1xwBMPRUIAnpjAynEr9GI8Wenl6D-J8i3?usp=sharing) |
 | real image denoising                          | [SIDD](https://drive.google.com/file/d/1UHjWZzLPGweA9ZczmV8lFSRcIxqiOVJw/view?usp=sharing) (320 training images) [complete training dataset [SIDD](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing)] | [SIDD](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view?usp=sharing) + [DND](https://drive.google.com/file/d/1CYCDhaVxYYcXhSfEVDUwkvJDtGxeQ10G/view?usp=sharing) [complete testing dataset [download](https://drive.google.com/drive/folders/1EYrJjnFi2S91pI-QaSh85gemS02H-pV6?usp=sharing)] | [here](https://drive.google.com/drive/folders/14chIIFh6uG4M-aOyJcu6mYjDIpm4zE5t?usp=sharing) |
 
 Here the visual results are generated under SR (x4), JPEG compression artifact reduction (q10), and real image denoising.
@@ -87,24 +87,24 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
   ```shell
   # CAT-R, SR, input=64x64, output=256x256, 4 GPUs
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_sr_x2.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_sr_x3.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_sr_x4.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_R_sr_x2.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_R_sr_x3.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_R_sr_x4.yml --launcher pytorch
   
   # CAT-A, SR, input=64x64, output=256x256, 4 GPUs
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_sr_x2.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_sr_x3.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_sr_x4.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_A_sr_x2.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_A_sr_x3.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_A_sr_x4.yml --launcher pytorch
   
   # CAT-R-2, SR, input=64x64, output=256x256, 4 GPUs
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_2_sr_x2.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_2_sr_x3.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_R_2_sr_x4.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_R_2_sr_x2.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_R_2_sr_x3.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_R_2_sr_x4.yml --launcher pytorch
   
   # CAT-A-2, SR, input=64x64, output=256x256, 4 GPUs
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_2_sr_x2.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_2_sr_x3.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_A_2_sr_x4.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_A_2_sr_x2.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_A_2_sr_x3.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_A_2_sr_x4.yml --launcher pytorch
   ```
 
 - The training experiment is in `experiments/`.
@@ -124,10 +124,10 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
   ```shell
   # CAT, CAR, input=128x128, output=128x128, 4 GPUs
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_car_q40.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_car_q30.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_car_q20.yml --launcher pytorch
-  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/Train/train_CAT_car_q40.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_car_q40.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_car_q30.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_car_q20.yml --launcher pytorch
+  python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_car_q40.yml --launcher pytorch
   ```
   
 - The training experiment is in `experiments/`.
@@ -175,24 +175,24 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
    ```shell
    # CAT-R, SR, produces results in Table 2 of the main paper
-   python basicsr/test.py -opt options/Test/test_CAT_R_sr_x2.yml
-   python basicsr/test.py -opt options/Test/test_CAT_R_sr_x3.yml
-   python basicsr/test.py -opt options/Test/test_CAT_R_sr_x4.yml
+   python basicsr/test.py -opt options/test/test_CAT_R_sr_x2.yml
+   python basicsr/test.py -opt options/test/test_CAT_R_sr_x3.yml
+   python basicsr/test.py -opt options/test/test_CAT_R_sr_x4.yml
    
    # CAT-A, SR, produces results in Table 2 of the main paper
-   python basicsr/test.py -opt options/Test/test_CAT_A_sr_x2.yml
-   python basicsr/test.py -opt options/Test/test_CAT_A_sr_x3.yml
-   python basicsr/test.py -opt options/Test/test_CAT_A_sr_x4.yml
+   python basicsr/test.py -opt options/test/test_CAT_A_sr_x2.yml
+   python basicsr/test.py -opt options/test/test_CAT_A_sr_x3.yml
+   python basicsr/test.py -opt options/test/test_CAT_A_sr_x4.yml
    
    # CAT-R-2, SR, produces results in Table 1 of the supplementary material
-   python basicsr/test.py -opt options/Test/test_CAT_R_2_sr_x2.yml
-   python basicsr/test.py -opt options/Test/test_CAT_R_2_sr_x3.yml
-   python basicsr/test.py -opt options/Test/test_CAT_R_2_sr_x4.yml
+   python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x2.yml
+   python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x3.yml
+   python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x4.yml
    
    # CAT-A-2, SR, produces results in Table 1 of the supplementary material
-   python basicsr/test.py -opt options/Test/test_CAT_A_2_sr_x2.yml
-   python basicsr/test.py -opt options/Test/test_CAT_A_2_sr_x3.yml
-   python basicsr/test.py -opt options/Test/test_CAT_A_2_sr_x4.yml
+   python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x2.yml
+   python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x3.yml
+   python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x4.yml
    ```
 
 - The output is in `results/`.
@@ -216,10 +216,10 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
   ```shell
   # CAT-A, SR, produces results in Table 3 of the main paper
-  python basicsr/test.py -opt options/Test/test_CAT_car_q10.yml
-  python basicsr/test.py -opt options/Test/test_CAT_car_q20.yml
-  python basicsr/test.py -opt options/Test/test_CAT_car_q30.yml
-  python basicsr/test.py -opt options/Test/test_CAT_car_q40.yml
+  python basicsr/test.py -opt options/test/test_CAT_car_q10.yml
+  python basicsr/test.py -opt options/test/test_CAT_car_q20.yml
+  python basicsr/test.py -opt options/test/test_CAT_car_q30.yml
+  python basicsr/test.py -opt options/test/test_CAT_car_q40.yml
   ```
 
 - The output is in `results/`.
