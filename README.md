@@ -55,20 +55,20 @@ Used training and testing sets can be downloaded as follows:
 
 Here the visual results are generated under SR (x4), JPEG compression artifact reduction (q10), and real image denoising.
 
-Download training and testing datasets and put them into the corresponding folders of `datasets/` and `Restormer/datasets`. See [datasets](datasets/README.md) for the collection form.
+Download training and testing datasets and put them into the corresponding folders of `datasets/` and `Restormer/datasets`. See [datasets](datasets/README.md) for the detail of directory structure.
 
 ## Models
 
 |  Task   | Method  | Params (M) | FLOPs (G) | Dataset  | PSNR  |  SSIM  |                          Model Zoo                           |                        Visual Results                        |
 | :-----: | :------ | :--------: | :-------: | :------: | :---: | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|   SR    | CAT-R   |   16.60    |   292.7   | Urban100 | 27.45 | 0.8254 | [Google Drive](https://drive.google.com/drive/folders/1oBCa_ZmKQnqtkgfk2b5P5nGi-c2oH6Ez?usp=sharing) | [Google Drive](https://drive.google.com/file/d/108IvgnaibEGtPIcefovh_drGGbuWNOqv/view?usp=sharing) |
-|   SR    | CAT-A   |   16.60    |   360.7   | Urban100 | 27.89 | 0.8339 | [Google Drive](https://drive.google.com/drive/folders/1Xm4xQXI74gZcPwgmQHw1qbgdEA0kVCSP?usp=sharing) | [Google Drive](https://drive.google.com/file/d/14Jy3y7ILGb1W-HqHvobQCeDT4JEfBr0w/view?usp=sharing) |
-|   SR    | CAT-R-2 |   11.93    |   216.3   | Urban100 | 27.59 | 0.8285 | [Google Drive](https://drive.google.com/drive/folders/175wdTqjpURS7TSRIj3DODVI_ppktqdJu?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1pRoALQRTfngmSURcIWGemHp0ozpJU7rk/view?usp=sharing) |
-|   SR    | CAT-A-2 |   16.60    |   387.9   | Urban100 | 27.99 | 0.8357 | [Google Drive](https://drive.google.com/drive/folders/1oBCa_ZmKQnqtkgfk2b5P5nGi-c2oH6Ez?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1L-Qw3Jbd4yghuJIGB9n0PMGO0VpSwD2v/view?usp=sharing) |
+|   SR    | CAT-R   |   16.60    |   292.7   | Urban100 | 27.45 | 0.8254 | [Google Drive](https://drive.google.com/drive/folders/1xAFaLnUyloWxK-aXwGzF3rYK0kVh87G5?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1ebuo3hSwe5yAy2wycsUh_7UHa1XpkTK1/view?usp=sharing) |
+|   SR    | CAT-A   |   16.60    |   360.7   | Urban100 | 27.89 | 0.8339 | [Google Drive](https://drive.google.com/drive/folders/1Xm4xQXI74gZcPwgmQHw1qbgdEA0kVCSP?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1_7pHedwrIHQcsiDuEbPF2v4xzba6RtM3/view?usp=sharing) |
+|   SR    | CAT-R-2 |   11.93    |   216.3   | Urban100 | 27.59 | 0.8285 | [Google Drive](https://drive.google.com/drive/folders/175wdTqjpURS7TSRIj3DODVI_ppktqdJu?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1YbMu29Q575npeHbImiNegLCpNGdCTrTR/view?usp=sharing) |
+|   SR    | CAT-A-2 |   16.60    |   387.9   | Urban100 | 27.99 | 0.8357 | [Google Drive](https://drive.google.com/drive/folders/1oBCa_ZmKQnqtkgfk2b5P5nGi-c2oH6Ez?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1_0QTv_RKcxVrTjFqzGLl3x3VO45T8QeW/view?usp=sharing) |
 |   CAR   | CAT     |   16.20    |   346.4   |  LIVE1   | 29.89 | 0.8295 | [Google Drive](https://drive.google.com/drive/folders/18414_dEErUhZyeHfWGaSa6PLesM3X3ie?usp=sharing) | [Google Drive](https://drive.google.com/drive/folders/1xwBMPRUIAnpjAynEr9GI8Wenl6D-J8i3?usp=sharing) |
 | real-DN | CAT     |   25.77    |   53.2    |   SIDD   | 40.01 | 0.9600 | [Google Drive](https://drive.google.com/drive/folders/1rkNeKeGiZqKit0M_AxFx1yfGu6z1ahgc?usp=sharing) | [Google Drive](https://drive.google.com/drive/folders/14chIIFh6uG4M-aOyJcu6mYjDIpm4zE5t?usp=sharing) |
 
-The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (real-DN). The test size of FLOPS is 128 x 128.
+The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (real-DN). The test size of FLOPS is 128 x 128.
 
 ## Training
 
@@ -83,7 +83,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 - Download [training](https://drive.google.com/drive/folders/1gWq-2fE_9cBa0fwXVjKY5GPIqJ09cgG3?usp=sharing) (DF2K, already processed) and [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109, already processed) datasets, place them in `datasets/`.
 
-- Run the folloing scripts. The training configuration is in `options/train/`.
+- Run the following scripts. The training configuration is in `options/train/`.
 
   ```shell
   # CAT-R, SR, input=64x64, output=256x256, 4 GPUs
@@ -120,7 +120,7 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 - Download [training](https://drive.google.com/drive/folders/1ro_Rh64xGae6h7i_FUJV3UzcQZnqlEob?usp=sharing) (DFBW, already processed) and [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) (Classic5, LIVE1, Urban100, already processed) datasets, place them in `datasets/`.
 
-- Run the folloing scripts. The training configuration is in `options/train/`.
+- Run the following scripts. The training configuration is in `options/train/`.
 
   ```shell
   # CAT, CAR, input=128x128, output=128x128, 4 GPUs
@@ -141,16 +141,14 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
   python setup.py develop --no_cuda_ext
   ```
 
-- Download [training](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing) (SIDD-train, already processed), [val](https://drive.google.com/file/d/1Fw6Ey1R-nCHN9WEpxv0MnMqxij-ECQYJ/view?usp=sharing) (SIDD-val), and [test](https://drive.google.com/drive/folders/1EYrJjnFi2S91pI-QaSh85gemS02H-pV6?usp=sharing) (SIDD-test, DND) datasets, place them in `datasets/` (`Restormer/datasets/`).
+- Download [training](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing) (SIDD-train, contains validation dataset, already processed) datasets, and place them in `datasets/` (`Restormer/datasets/`).
 
-- Run the folloing scripts. The training configuration is in `options/` (`Restormer/options/`).
+- Run the following scripts. The training configuration is in `options/` (`Restormer/options/`).
 
   ```shell
   # CAT, Real DN, Progressive Learning, 8 GPUs
   python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train_RealDenoising_CAT.yml --launcher pytorch
   ```
-
-  run `python setup.py develop` to re-set the environment for BasicSR.
 
 - The training experiment is in `experiments/` (`Restormer/experiments/`).
 
@@ -167,29 +165,30 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 - Download the pre-trained [models](https://drive.google.com/drive/folders/1Pd4tuE3f84aY5bcjR8KA5FshAT3-MXLB?usp=sharing) and place them in `experiments/pretrained_models/`.
 
-   We provide some models for image SR: CAT-R, CAT-A, CAT-A, and CAT-R-2 (x2, x3, x4).
+   We provide pre-trained models for image SR: CAT-R, CAT-A, CAT-A, and CAT-R-2 (x2, x3, x4).
 
 - Download [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109, already processed) datasets, place them in `datasets/`.
 
-- Run the folloing scripts. The testing configuration is in `options/test/`.
+- Run the following scripts. The testing configuration is in `options/test/`.
 
    ```shell
-   # CAT-R, SR, produces results in Table 2 of the main paper
+   # No self-ensemble
+   # CAT-R, SR, reproduces results in Table 2 of the main paper
    python basicsr/test.py -opt options/test/test_CAT_R_sr_x2.yml
    python basicsr/test.py -opt options/test/test_CAT_R_sr_x3.yml
    python basicsr/test.py -opt options/test/test_CAT_R_sr_x4.yml
    
-   # CAT-A, SR, produces results in Table 2 of the main paper
+   # CAT-A, SR, reproduces results in Table 2 of the main paper
    python basicsr/test.py -opt options/test/test_CAT_A_sr_x2.yml
    python basicsr/test.py -opt options/test/test_CAT_A_sr_x3.yml
    python basicsr/test.py -opt options/test/test_CAT_A_sr_x4.yml
    
-   # CAT-R-2, SR, produces results in Table 1 of the supplementary material
+   # CAT-R-2, SR, reproduces results in Table 1 of the supplementary material
    python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x2.yml
    python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x3.yml
    python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x4.yml
    
-   # CAT-A-2, SR, produces results in Table 1 of the supplementary material
+   # CAT-A-2, SR, reproduces results in Table 1 of the supplementary material
    python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x2.yml
    python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x3.yml
    python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x4.yml
@@ -208,14 +207,15 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 - Download the pre-trained [models](https://drive.google.com/drive/folders/18414_dEErUhZyeHfWGaSa6PLesM3X3ie?usp=sharing) and place them in `experiments/pretrained_models/`.
 
-  We provide some models for JPEG compression artifact reduction: CAT (q10, q20, q30, q40).
+  We provide pre-trained models for JPEG compression artifact reduction: CAT (q10, q20, q30, q40).
 
 - Download [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) (Classic5, LIVE, Urban100, already processed) datasets, place them in `datasets/`.
 
-- Run the folloing scripts. The testing configuration is in `options/test/`.
+- Run the following scripts. The testing configuration is in `options/test/`.
 
   ```shell
-  # CAT-A, SR, produces results in Table 3 of the main paper
+  # No self-ensemble
+  # CAT-A, CAR, rereproduces results in Table 3 of the main paper
   python basicsr/test.py -opt options/test/test_CAT_car_q10.yml
   python basicsr/test.py -opt options/test/test_CAT_car_q20.yml
   python basicsr/test.py -opt options/test/test_CAT_car_q30.yml
@@ -237,10 +237,11 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 - Download [testing](https://drive.google.com/drive/folders/1EYrJjnFi2S91pI-QaSh85gemS02H-pV6?usp=sharing) (SIDD, DND) datasets, place them in `datasets/`.
 
-- Run the folloing scripts.
+- Run the following scripts. The testing configuration is in `options/test/`.
 
   ```shell
-  # CAT, real DN, produces results in Table 4 of the main paper
+  # No self-ensemble
+  # CAT, real DN, reproduces results in Table 4 of the main paper
   # testing on SIDD
   python test_real_denoising_sidd.py --save_images
   evaluate_sidd.m
@@ -252,6 +253,8 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 - The output is in `results/`.
 
 ## Results
+
+We achieved state-of-the-art performance on image SR, JPEG compression artifact reduction and real image denoising. Detailed results can be found in the paper. All visual results of CAT can be downloaded [here](https://drive.google.com/drive/folders/1SIQ342yyrlHTCxINf9wYNchOa5eOw_7s?usp=sharing).
 
 <details>
 <summary>Image SR (click to expan)</summary>
@@ -277,8 +280,14 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 
 <p align="center">
   <img width="900" src="figs/CAR-1.png">
-  <img width="900" src="figs/CAR-2.png">
 </p>
+
+- results in Table 3 of the supplementary material (test on **Urban100**)
+
+<p align="center">
+  <img width="600" src="figs/CAR-2.png">
+</p>
+
 </details>
 
 <details>
@@ -289,6 +298,8 @@ The performance are reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (
 <p align="center">
   <img width="900" src="figs/Real-DN.png">
 </p>
+*: We re-test the SIDD with all official pre-trained models.
+
 </details>
 
 ## Citation

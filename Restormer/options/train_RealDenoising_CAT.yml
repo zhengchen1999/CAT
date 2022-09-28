@@ -10,8 +10,8 @@ datasets:
   train:
     name: SIDD-train
     type: Dataset_PairedImage
-    dataroot_gt: datasets/train/SIDD/target_crops
-    dataroot_lq: datasets/train/SIDD/input_crops
+    dataroot_gt: datasets/SIDD/train/target_crops
+    dataroot_lq: datasets/SIDD/train/input_crops
     geometric_augs: true
 
     filename_tmpl: '{}'
@@ -43,8 +43,8 @@ datasets:
   val:
     name: SIDD-val
     type: Dataset_PairedImage
-    dataroot_gt: datasets/val/SIDD/target_crops
-    dataroot_lq: datasets/val/SIDD/input_crops
+    dataroot_gt: datasets/SIDD/val/target_crops
+    dataroot_lq: datasets/SIDD/val/input_crops
     io_backend:
       type: disk
 

@@ -1,5 +1,5 @@
 # general settings
-name: test_CAT_R_2_x3
+name: test_SR_CAT_R_2_x3
 model_type: CATModle
 scale: 3
 num_gpu: 1

@@ -1,5 +1,5 @@
 # general settings
-name: test_CAR_q20
+name: test_CAR_CAT_q20
 model_type: CATModle
 scale: 1
 num_gpu: 1
@@ -22,6 +22,16 @@ datasets:
     type: PairedImageDataset
     dataroot_gt: datasets/CAR/LIVE1/LIVE1_HQ
     dataroot_lq: datasets/CAR/LIVE1/LIVE1_LQ/20
+    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+
+  test_3:  # the 3st test dataset
+    task: CAR
+    name: Urban100
+    type: PairedImageDataset
+    dataroot_gt: datasets/CAR/Urban100/Urban100_HQ
+    dataroot_lq: datasets/CAR/Urban100/Urban100_LQ/20
     filename_tmpl: '{}'
     io_backend:
       type: disk

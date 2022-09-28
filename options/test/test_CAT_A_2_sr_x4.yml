@@ -1,5 +1,5 @@
 # general settings
-name: test_CAT_A_2_x4
+name: test_SR_CAT_A_2_x4
 model_type: CATModle
 scale: 4
 num_gpu: 1

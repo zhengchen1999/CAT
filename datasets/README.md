@@ -1,4 +1,5 @@
-For training and testing, recollect all datasets as the following form:
+For training and testing, the directory structure is as follows:
+
 ```shell
 |-- datasets
     # image SR - train
@@ -12,7 +13,7 @@ For training and testing, recollect all datasets as the following form:
     |-- benchmark
         |-- Set5
             |-- HR
-            |-- LR_bicubic
+          |-- LR_bicubic
                 |-- X2
                 |-- X3
                 |-- X4
@@ -70,7 +71,7 @@ For training and testing, recollect all datasets as the following form:
                 |-- 30
                 |-- 40
     # real image denoising - test
-    |-- test
+  |-- real-DN
         |-- SIDD
             |-- ValidationGtBlocksSrgb.mat
             |-- ValidationNoisyBlocksSrgb.mat
@@ -84,18 +85,18 @@ For training and testing, recollect all datasets as the following form:
 |-- Restormer
     # real image denoising - train & val
     |-- datasets
-        |-- Dowloads
+        |-- SIDD
             |-- train
+                |-- target_crops
+                |-- input_crops  
+            |-- val
+                |-- target_crops
+                |-- input_crops   
+            # the raw data of SIDD-train
+            |-- download
                 |-- 0001_001_S6_00100_00060_3200_L
                 ：  
                 |-- 0200_010_GP_01600_03200_5500_N
-        |-- train
-            |-- SIDD
-                |-- target_crops
-                |-- input_crops
-        |-- val
-            |-- SIDD
-                |-- target_crops
-                |-- input_crops
 ```
 
+You can download the complete datasets we have collected. 
