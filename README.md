@@ -138,7 +138,7 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
 - Cd to 'CAT/restormer' and run the setup script
 
   ```shell
-  # If already in Restormer and set up, please ignore
+  # If already in restormer and set up, please ignore
   python setup.py develop --no_cuda_ext
   ```
 
