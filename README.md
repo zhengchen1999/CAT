@@ -55,7 +55,7 @@ Used training and testing sets can be downloaded as follows:
 
 Here the visual results are generated under SR (x4), JPEG compression artifact reduction (q10), and real image denoising.
 
-Download training and testing datasets and put them into the corresponding folders of `datasets/` and `Restormer/datasets`. See [datasets](datasets/README.md) for the detail of directory structure.
+Download training and testing datasets and put them into the corresponding folders of `datasets/` and `restormer/datasets`. See [datasets](datasets/README.md) for the detail of directory structure.
 
 ## Models
 
@@ -134,23 +134,23 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
 
 ### Real Image Denoising
 
-- Cd to 'CAT/Restormer' and run the setup script
+- Cd to 'CAT/restormer' and run the setup script
 
   ```shell
   # If already in Restormer and set up, please ignore
   python setup.py develop --no_cuda_ext
   ```
 
-- Download [training](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing) (SIDD-train, contains validation dataset, already processed) datasets, and place them in `datasets/` (`Restormer/datasets/`).
+- Download [training](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing) (SIDD-train, contains validation dataset, already processed) datasets, and place them in `datasets/` (`restormer/datasets/`).
 
-- Run the following scripts. The training configuration is in `options/` (`Restormer/options/`).
+- Run the following scripts. The training configuration is in `options/` (`restormer/options/`).
 
   ```shell
   # CAT, Real DN, Progressive Learning, 8 GPUs
   python -m torch.distributed.launch --nproc_per_node=8 --master_port=4321 basicsr/train.py -opt options/train_RealDenoising_CAT.yml --launcher pytorch
   ```
 
-- The training experiment is in `experiments/` (`Restormer/experiments/`).
+- The training experiment is in `experiments/` (`restormer/experiments/`).
 
 ## Testing
 
