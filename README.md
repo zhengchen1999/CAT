@@ -12,11 +12,12 @@ Zheng Chen, Yulun Zhang, Jinjin Gu, Yongbing Zhang, Linghe Kong, and Xin Yuan, "
 
 ## Dependencies
 
-- python 3.8
-- pyTorch >= 1.8.0
+- Python 3.8
+- PyTorch >= 1.8.0
 - NVIDIA GPU + [CUDA](https://developer.nvidia.com/cuda-downloads)
 
 ```bash
+# Clone the github repo and go to the default directory 'CAT'.
 git clone https://github.com/zhengchen1999/CAT.git
 pip install -r requirements.txt
 python setup.py develop
