@@ -1,6 +1,6 @@
 # Cross Aggregation Transformer for Image Restoration
 
-Zheng Chen, Yulun Zhang, Jinjin Gu, Yongbing Zhang, Linghe Kong, and Xin Yuan, "Cross Aggregation Transformer for Image Restoration", NeurIPS, 2022
+Zheng Chen, [Yulun Zhang](http://yulunzhang.com/), [Jinjin Gu](https://www.jasongt.com/), [Yongbing Zhang](https://shinning0821.github.io/index.html), [Linghe Kong](https://www.cs.sjtu.edu.cn/~linghe.kong/), and [Xin Yuan](https://xygroup6.github.io/xygroup/), "Cross Aggregation Transformer for Image Restoration", NeurIPS, 2022
 
 ---
 
@@ -26,7 +26,7 @@ python setup.py develop
 ## TODO
 
 * [x] Image SR
-* [x] JPEG compression artifact reduction
+* [x] JPEG Compression Artifact Reduction
 * [x] Image Denoising
 * [ ] Image Deblurring
 * [ ] Image Deraining
