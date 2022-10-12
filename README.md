@@ -124,7 +124,7 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
 - Run the following scripts. The training configuration is in `options/train/`.
 
   ```shell
-  # CAT, CAR, input=128x128, output=128x128, 4 GPUs
+  # CAT, CAR, input=128x128, 4 GPUs
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_car_q10.yml --launcher pytorch
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_car_q20.yml --launcher pytorch
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_car_q30.yml --launcher pytorch
