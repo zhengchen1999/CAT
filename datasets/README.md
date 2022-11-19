@@ -71,7 +71,7 @@ For training and testing, the directory structure is as follows:
                 |-- 30
                 |-- 40
     # real image denoising - test
-  |-- real-DN
+    |-- real-DN
         |-- SIDD
             |-- ValidationGtBlocksSrgb.mat
             |-- ValidationNoisyBlocksSrgb.mat
