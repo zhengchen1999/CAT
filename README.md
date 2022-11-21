@@ -52,9 +52,9 @@ Used training and testing sets can be downloaded as follows:
 
 | Task                                          |                         Training Set                         |                         Testing Set                          |                        Visual Results                        |
 | :-------------------------------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| image SR                                      | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) [complete training dataset [DF2K](https://drive.google.com/drive/folders/1gWq-2fE_9cBa0fwXVjKY5GPIqJ09cgG3?usp=sharing)] | Set5 + Set14 + BSD100 + Urban100 + Manga109 [complete testing dataset [download](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing)] | [here](https://drive.google.com/drive/folders/122LBzNSuc-YwzyTzA2VL9mXSJPWBxICZ?usp=sharing) |
-| grayscale JPEG compression artifact reduction | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) + [BSD500](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz) (400 training&testing images) + [WED](http://ivc.uwaterloo.ca/database/WaterlooExploration/exploration_database_and_code.rar)(4744 images) [complete training dataset [DFBW](https://drive.google.com/drive/folders/1ro_Rh64xGae6h7i_FUJV3UzcQZnqlEob?usp=sharing)] | Classic5 +LIVE + Urban100 [complete testing dataset [download](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing)] | [here](https://drive.google.com/drive/folders/1xwBMPRUIAnpjAynEr9GI8Wenl6D-J8i3?usp=sharing) |
-| real image denoising                          | [SIDD](https://drive.google.com/file/d/1UHjWZzLPGweA9ZczmV8lFSRcIxqiOVJw/view?usp=sharing) (320 training images) [complete training dataset [SIDD](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing)] | [SIDD](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view?usp=sharing) + [DND](https://drive.google.com/file/d/1CYCDhaVxYYcXhSfEVDUwkvJDtGxeQ10G/view?usp=sharing) [complete testing dataset [download](https://drive.google.com/drive/folders/1EYrJjnFi2S91pI-QaSh85gemS02H-pV6?usp=sharing)] | [here](https://drive.google.com/drive/folders/14chIIFh6uG4M-aOyJcu6mYjDIpm4zE5t?usp=sharing) |
+| image SR                                      | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) [complete training dataset [DF2K](https://drive.google.com/file/d/1TubDkirxl4qAWelfOnpwaSKoj3KLAIG4/view?usp=share_link)] | Set5 + Set14 + BSD100 + Urban100 + Manga109 [complete testing dataset [download](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing)] | [here](https://drive.google.com/drive/folders/122LBzNSuc-YwzyTzA2VL9mXSJPWBxICZ?usp=sharing) |
+| grayscale JPEG compression artifact reduction | [DIV2K](https://data.vision.ee.ethz.ch/cvl/DIV2K/) (800 training images) +  [Flickr2K](https://cv.snu.ac.kr/research/EDSR/Flickr2K.tar) (2650 images) + [BSD500](http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/BSR_bsds500.tgz) (400 training&testing images) + [WED](http://ivc.uwaterloo.ca/database/WaterlooExploration/exploration_database_and_code.rar)(4744 images) [complete training dataset [DFBW](https://drive.google.com/file/d/1IASyJRsX9CKBE0i5iSJMelIr_a6U5Qcd/view?usp=share_link)] | Classic5 +LIVE + Urban100 [complete testing dataset [download](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing)] | [here](https://drive.google.com/drive/folders/1xwBMPRUIAnpjAynEr9GI8Wenl6D-J8i3?usp=sharing) |
+| real image denoising                          | [SIDD](https://www.eecs.yorku.ca/~kamel/sidd/) (320 training images) [complete training dataset [SIDD](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=share_link)] | [SIDD](https://drive.google.com/file/d/11vfqV-lqousZTuAit1Qkqghiv_taY0KZ/view?usp=sharing) + [DND](https://drive.google.com/file/d/1CYCDhaVxYYcXhSfEVDUwkvJDtGxeQ10G/view?usp=sharing) [complete testing dataset [download](https://drive.google.com/file/d/1Vuu0uhm_-PAG-5UPI0bPIaEjSfrSvsTO/view?usp=share_link)] | [here](https://drive.google.com/drive/folders/14chIIFh6uG4M-aOyJcu6mYjDIpm4zE5t?usp=sharing) |
 
 Here the visual results are generated under SR (x4), JPEG compression artifact reduction (q10), and real image denoising.
 
@@ -84,7 +84,7 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
   python setup.py develop
   ```
 
-- Download [training](https://drive.google.com/drive/folders/1gWq-2fE_9cBa0fwXVjKY5GPIqJ09cgG3?usp=sharing) (DF2K, already processed) and [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109, already processed) datasets, place them in `datasets/`.
+- Download [training](https://drive.google.com/file/d/1TubDkirxl4qAWelfOnpwaSKoj3KLAIG4/view?usp=share_link) (DF2K, already processed) and [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109, already processed) datasets, place them in `datasets/`.
 
 - Run the following scripts. The training configuration is in `options/train/`.
 
@@ -121,7 +121,7 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
   python setup.py develop
   ```
 
-- Download [training](https://drive.google.com/drive/folders/1ro_Rh64xGae6h7i_FUJV3UzcQZnqlEob?usp=sharing) (DFBW, already processed) and [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) (Classic5, LIVE1, Urban100, already processed) datasets, place them in `datasets/`.
+- Download [training](https://drive.google.com/file/d/1IASyJRsX9CKBE0i5iSJMelIr_a6U5Qcd/view?usp=share_link) (DFBW, already processed) and [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) (Classic5, LIVE1, Urban100, already processed) datasets, place them in `datasets/`.
 
 - Run the following scripts. The training configuration is in `options/train/`.
 
@@ -144,7 +144,7 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
   python setup.py develop --no_cuda_ext
   ```
 
-- Download [training](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=sharing) (SIDD-train, contains validation dataset, already processed) datasets, and place them in `datasets/` (`restormer/datasets/`).
+- Download [training](https://drive.google.com/drive/folders/1L_8ig1P71ikzf8PHGs60V6dZ2xoCixaC?usp=share_link) (SIDD-train, contains validation dataset, already processed) datasets, and place them in `datasets/` (`restormer/datasets/`).
 
 - Run the following scripts. The training configuration is in `options/` (`restormer/options/`).
 

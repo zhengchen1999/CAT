@@ -41,14 +41,16 @@ For training and testing, the directory structure is as follows:
                 |-- X2
                 |-- X3
                 |-- X4        
-    # grayscale JPEG compression artifact reduction - train & test
-    |-- CAR
-        |-- DFWB_HQ
-        |-- DFWB_LQ
+    # grayscale JPEG compression artifact reduction - train
+    |-- DFWB
+        |-- HQ
+        |-- LQ
             |-- 10
             |-- 20
             |-- 30
             |-- 40
+    # grayscale JPEG compression artifact reduction - test
+    |-- CAR
         |-- classic5
             |-- Classic5_HQ
             |-- Classic5_LQ
@@ -94,7 +96,7 @@ For training and testing, the directory structure is as follows:
                 |-- target_crops
                 |-- input_crops   
             # the raw data of SIDD-train
-            |-- download
+            |-- raw
                 |-- 0001_001_S6_00100_00060_3200_L
                 ：  
                 |-- 0200_010_GP_01600_03200_5500_N

@@ -11,8 +11,8 @@ datasets:
     task: CAR
     name: DIV2K+Flickr2K+WED+BSD400
     type: PairedImageDataset
-    dataroot_gt: datasets/CAR/DFWB_HQ
-    dataroot_lq: datasets/CAR/DFWB_LQ/40
+    dataroot_gt: datasets/DFWB/HQ
+    dataroot_lq: datasets/DFWB/LQ/40
     filename_tmpl: '{}'
     io_backend:
       type: disk

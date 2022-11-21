@@ -8,7 +8,7 @@ from tqdm import tqdm
 from pdb import set_trace as stx
 
 
-src = 'datasets/SIDD/download'
+src = 'datasets/SIDD/raw'
 tar = 'datasets/SIDD/train'
 
 lr_tar = os.path.join(tar, 'input_crops')
