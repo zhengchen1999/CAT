@@ -62,14 +62,14 @@ Download training and testing datasets and put them into the corresponding folde
 
 ## Models
 
-|  Task   | Method  | Params (M) | FLOPs (G) | Dataset  | PSNR  |  SSIM  |                          Model Zoo                           |                        Visual Results                        |
-| :-----: | :------ | :--------: | :-------: | :------: | :---: | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|   SR    | CAT-R   |   16.60    |   292.7   | Urban100 | 27.45 | 0.8254 | [Google Drive](https://drive.google.com/drive/folders/1xAFaLnUyloWxK-aXwGzF3rYK0kVh87G5?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1ebuo3hSwe5yAy2wycsUh_7UHa1XpkTK1/view?usp=sharing) |
-|   SR    | CAT-A   |   16.60    |   360.7   | Urban100 | 27.89 | 0.8339 | [Google Drive](https://drive.google.com/drive/folders/1Xm4xQXI74gZcPwgmQHw1qbgdEA0kVCSP?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1_7pHedwrIHQcsiDuEbPF2v4xzba6RtM3/view?usp=sharing) |
-|   SR    | CAT-R-2 |   11.93    |   216.3   | Urban100 | 27.59 | 0.8285 | [Google Drive](https://drive.google.com/drive/folders/175wdTqjpURS7TSRIj3DODVI_ppktqdJu?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1YbMu29Q575npeHbImiNegLCpNGdCTrTR/view?usp=sharing) |
-|   SR    | CAT-A-2 |   16.60    |   387.9   | Urban100 | 27.99 | 0.8357 | [Google Drive](https://drive.google.com/drive/folders/1oBCa_ZmKQnqtkgfk2b5P5nGi-c2oH6Ez?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1_0QTv_RKcxVrTjFqzGLl3x3VO45T8QeW/view?usp=sharing) |
-|   CAR   | CAT     |   16.20    |   346.4   |  LIVE1   | 29.89 | 0.8295 | [Google Drive](https://drive.google.com/drive/folders/18414_dEErUhZyeHfWGaSa6PLesM3X3ie?usp=sharing) | [Google Drive](https://drive.google.com/drive/folders/1xwBMPRUIAnpjAynEr9GI8Wenl6D-J8i3?usp=sharing) |
-| real-DN | CAT     |   25.77    |   53.2    |   SIDD   | 40.01 | 0.9600 | [Google Drive](https://drive.google.com/drive/folders/1rkNeKeGiZqKit0M_AxFx1yfGu6z1ahgc?usp=sharing) | [Google Drive](https://drive.google.com/drive/folders/14chIIFh6uG4M-aOyJcu6mYjDIpm4zE5t?usp=sharing) |
+|  Task   | Method  | Params (M) | FLOPs (G) | Dataset  | PSNR (dB) |  SSIM  |                          Model Zoo                           |                        Visual Results                        |
+| :-----: | :------ | :--------: | :-------: | :------: | :-------: | :----: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|   SR    | CAT-R   |   16.60    |   292.7   | Urban100 |   27.45   | 0.8254 | [Google Drive](https://drive.google.com/drive/folders/1xAFaLnUyloWxK-aXwGzF3rYK0kVh87G5?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1ebuo3hSwe5yAy2wycsUh_7UHa1XpkTK1/view?usp=sharing) |
+|   SR    | CAT-A   |   16.60    |   360.7   | Urban100 |   27.89   | 0.8339 | [Google Drive](https://drive.google.com/drive/folders/1Xm4xQXI74gZcPwgmQHw1qbgdEA0kVCSP?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1_7pHedwrIHQcsiDuEbPF2v4xzba6RtM3/view?usp=sharing) |
+|   SR    | CAT-R-2 |   11.93    |   216.3   | Urban100 |   27.59   | 0.8285 | [Google Drive](https://drive.google.com/drive/folders/175wdTqjpURS7TSRIj3DODVI_ppktqdJu?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1YbMu29Q575npeHbImiNegLCpNGdCTrTR/view?usp=sharing) |
+|   SR    | CAT-A-2 |   16.60    |   387.9   | Urban100 |   27.99   | 0.8357 | [Google Drive](https://drive.google.com/drive/folders/1oBCa_ZmKQnqtkgfk2b5P5nGi-c2oH6Ez?usp=sharing) | [Google Drive](https://drive.google.com/file/d/1_0QTv_RKcxVrTjFqzGLl3x3VO45T8QeW/view?usp=sharing) |
+|   CAR   | CAT     |   16.20    |   346.4   |  LIVE1   |   29.89   | 0.8295 | [Google Drive](https://drive.google.com/drive/folders/18414_dEErUhZyeHfWGaSa6PLesM3X3ie?usp=sharing) | [Google Drive](https://drive.google.com/drive/folders/1xwBMPRUIAnpjAynEr9GI8Wenl6D-J8i3?usp=sharing) |
+| real-DN | CAT     |   25.77    |   53.2    |   SIDD   |   40.01   | 0.9600 | [Google Drive](https://drive.google.com/drive/folders/1rkNeKeGiZqKit0M_AxFx1yfGu6z1ahgc?usp=sharing) | [Google Drive](https://drive.google.com/drive/folders/14chIIFh6uG4M-aOyJcu6mYjDIpm4zE5t?usp=sharing) |
 
 The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (real-DN). The test size of FLOPS is 128 x 128.
 
