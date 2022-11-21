@@ -12,7 +12,7 @@ datasets:
     name: DIV2K+Flickr2K+WED+BSD400
     type: PairedImageDataset
     dataroot_gt: datasets/DFWB/HQ
-    dataroot_lq: datasets/DFWB/LQ/10
+    dataroot_lq: datasets/DFWB/LQ/30
     filename_tmpl: '{}'
     io_backend:
       type: disk
@@ -33,7 +33,7 @@ datasets:
     name: Classic5
     type: PairedImageDataset
     dataroot_gt: datasets/CAR/classic5/Classic5_HQ
-    dataroot_lq: datasets/CAR/classic5/Classic5_LQ/10
+    dataroot_lq: datasets/CAR/classic5/Classic5_LQ/30
     filename_tmpl: '{}'
     io_backend:
       type: disk
