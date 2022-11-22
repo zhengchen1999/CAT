@@ -9,7 +9,7 @@ manual_seed: 10
 datasets:
   train:
     task: CAR
-    name: DIV2K+Flickr2K+WED+BSD400
+    name: DFWB
     type: PairedImageDataset
     dataroot_gt: datasets/DFWB/HQ
     dataroot_lq: datasets/DFWB/LQ/30
