@@ -14,10 +14,10 @@ Zheng Chen, [Yulun Zhang](http://yulunzhang.com/), [Jinjin Gu](https://www.jason
 
 ---
 
-|                        SR (x4)                        |                       HQ                       |                         LQ                          |  [SwinIR](https://github.com/JingyunLiang/SwinIR)  |                   CAT (ours)                    |
-| :---------------------------------------------------: | :--------------------------------------------: | :-------------------------------------------------: | :------------------------------------------------: | :---------------------------------------------: |
-| <img src="figs/img_024_x4.png" height=100 width=160/> | <img src="figs/img_024_HR_x4.png" height=100/> | <img src="figs/img_024_Bicubic_x4.png" height=100/> | <img src="figs/img_024_SwinIR_x4.png" height=100/> | <img src="figs/img_024_CAT_x4.png" height=100/> |
-| <img src="figs/img_074_x4.png" height=100 width=160/> | <img src="figs/img_074_HR_x4.png" height=100/> | <img src="figs/img_074_Bicubic_x4.png" height=100/> | <img src="figs/img_074_SwinIR_x4.png" height=100/> | <img src="figs/img_074_CAT_x4.png" height=100/> |
+|                       SR (x4)                        |                      HQ                       |                         LQ                         | [SwinIR](https://github.com/JingyunLiang/SwinIR)  |                   CAT (ours)                   |
+| :--------------------------------------------------: | :-------------------------------------------: | :------------------------------------------------: | :-----------------------------------------------: | :--------------------------------------------: |
+| <img src="figs/img_024_x4.png" height=80 width=110/> | <img src="figs/img_024_HR_x4.png" height=80/> | <img src="figs/img_024_Bicubic_x4.png" height=80/> | <img src="figs/img_024_SwinIR_x4.png" height=80/> | <img src="figs/img_024_CAT_x4.png" height=80/> |
+| <img src="figs/img_074_x4.png" height=80 width=110/> | <img src="figs/img_074_HR_x4.png" height=80/> | <img src="figs/img_074_Bicubic_x4.png" height=80/> | <img src="figs/img_074_SwinIR_x4.png" height=80/> | <img src="figs/img_074_CAT_x4.png" height=80/> |
 
 ## Dependencies
 
