@@ -14,10 +14,10 @@ Zheng Chen, [Yulun Zhang](http://yulunzhang.com/), [Jinjin Gu](https://www.jason
 
 ---
 
-|                       SR (x4)                       |                           HQ                            |                              LQ                              |      [SwinIR](https://github.com/JingyunLiang/SwinIR)       |                        CAT (ours)                        |
-| :-------------------------------------------------: | :-----------------------------------------------------: | :----------------------------------------------------------: | :---------------------------------------------------------: | :------------------------------------------------------: |
-| <img src="figs/img_024_x4.png" style="zoom:24%;" /> | <img src="figs/img_024_HR_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_Bicubic_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_SwinIR_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_CAT_x4.png" style="zoom:150%;" /> |
-| <img src="figs/img_074_x4.png" style="zoom:24%;" /> | <img src="figs/img_074_HR_x4.png" style="zoom:150%;" /> | <img src="figs/img_074_Bicubic_x4.png" style="zoom:150%;" /> | <img src="figs/img_074_SwinIR_x4.png" style="zoom:150%;" /> | <img src="figs/img_074_CAT_x4.png" style="zoom:150%;" /> |
+|                       SR (x4)                        |                      HQ                       |                         LQ                         | [SwinIR](https://github.com/JingyunLiang/SwinIR)  |                   CAT (ours)                   |
+| :--------------------------------------------------: | :-------------------------------------------: | :------------------------------------------------: | :-----------------------------------------------: | :--------------------------------------------: |
+| <img src="figs/img_024_x4.png" height=70 width=110/> | <img src="figs/img_024_HR_x4.png" height=70/> | <img src="figs/img_024_Bicubic_x4.png" height=70/> | <img src="figs/img_024_SwinIR_x4.png" height=70/> | <img src="figs/img_024_CAT_x4.png" height=70/> |
+| <img src="figs/img_074_x4.png" height=70 width=110/> | <img src="figs/img_074_HR_x4.png" height=70/> | <img src="figs/img_074_Bicubic_x4.png" height=70/> | <img src="figs/img_074_SwinIR_x4.png" height=70/> | <img src="figs/img_074_CAT_x4.png" height=70/> |
 
 ## Dependencies
 
@@ -139,7 +139,7 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_car_q30.yml --launcher pytorch
   python -m torch.distributed.launch --nproc_per_node=4 --master_port=4321 basicsr/train.py -opt options/train/train_CAT_car_q40.yml --launcher pytorch
   ```
-  
+
 - The training experiment is in `experiments/`.
 
 ### Real Image Denoising
@@ -168,41 +168,41 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
 
 - Cd to 'CAT' and run the setup script
 
-   ```shell
-   # If already in CAT and set up, please ignore
-   python setup.py develop
-   ```
+  ```shell
+  # If already in CAT and set up, please ignore
+  python setup.py develop
+  ```
 
 - Download the pre-trained [models](https://drive.google.com/drive/folders/1Pd4tuE3f84aY5bcjR8KA5FshAT3-MXLB?usp=sharing) and place them in `experiments/pretrained_models/`.
 
-   We provide pre-trained models for image SR: CAT-R, CAT-A, CAT-A, and CAT-R-2 (x2, x3, x4).
+  We provide pre-trained models for image SR: CAT-R, CAT-A, CAT-A, and CAT-R-2 (x2, x3, x4).
 
 - Download [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109, already processed) datasets, place them in `datasets/`.
 
 - Run the following scripts. The testing configuration is in `options/test/`.
 
-   ```shell
-   # No self-ensemble
-   # CAT-R, SR, reproduces results in Table 2 of the main paper
-   python basicsr/test.py -opt options/test/test_CAT_R_sr_x2.yml
-   python basicsr/test.py -opt options/test/test_CAT_R_sr_x3.yml
-   python basicsr/test.py -opt options/test/test_CAT_R_sr_x4.yml
-   
-   # CAT-A, SR, reproduces results in Table 2 of the main paper
-   python basicsr/test.py -opt options/test/test_CAT_A_sr_x2.yml
-   python basicsr/test.py -opt options/test/test_CAT_A_sr_x3.yml
-   python basicsr/test.py -opt options/test/test_CAT_A_sr_x4.yml
-   
-   # CAT-R-2, SR, reproduces results in Table 1 of the supplementary material
-   python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x2.yml
-   python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x3.yml
-   python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x4.yml
-   
-   # CAT-A-2, SR, reproduces results in Table 1 of the supplementary material
-   python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x2.yml
-   python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x3.yml
-   python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x4.yml
-   ```
+  ```shell
+  # No self-ensemble
+  # CAT-R, SR, reproduces results in Table 2 of the main paper
+  python basicsr/test.py -opt options/test/test_CAT_R_sr_x2.yml
+  python basicsr/test.py -opt options/test/test_CAT_R_sr_x3.yml
+  python basicsr/test.py -opt options/test/test_CAT_R_sr_x4.yml
+  
+  # CAT-A, SR, reproduces results in Table 2 of the main paper
+  python basicsr/test.py -opt options/test/test_CAT_A_sr_x2.yml
+  python basicsr/test.py -opt options/test/test_CAT_A_sr_x3.yml
+  python basicsr/test.py -opt options/test/test_CAT_A_sr_x4.yml
+  
+  # CAT-R-2, SR, reproduces results in Table 1 of the supplementary material
+  python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x2.yml
+  python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x3.yml
+  python basicsr/test.py -opt options/test/test_CAT_R_2_sr_x4.yml
+  
+  # CAT-A-2, SR, reproduces results in Table 1 of the supplementary material
+  python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x2.yml
+  python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x3.yml
+  python basicsr/test.py -opt options/test/test_CAT_A_2_sr_x4.yml
+  ```
 
 - The output is in `results/`.
 
@@ -269,17 +269,20 @@ We achieved state-of-the-art performance on image SR, JPEG compression artifact 
 <details>
 <summary>Image SR (click to expan)</summary>
 
+
 - results in Table 2 of the main paper
 
 <p align="center">
   <img width="900" src="figs/SR-1.png">
 </p>
 
+
 - results in Table 1 of the supplementary material
 
 <p align="center">
   <img width="900" src="figs/SR-2.png">
 </p>
+
 - visual comparison (x4) in the main paper
 
 <p align="center">
@@ -299,11 +302,13 @@ We achieved state-of-the-art performance on image SR, JPEG compression artifact 
 <details>
 <summary>JPEG Compression Artifact Reduction (click to expan)</summary>
 
+
 - results in Table 3 of the main paper
 
 <p align="center">
   <img width="900" src="figs/CAR-1.png">
 </p>
+
 
 - results in Table 3 of the supplementary material (test on **Urban100**)
 
@@ -330,11 +335,13 @@ We achieved state-of-the-art performance on image SR, JPEG compression artifact 
 <details>
 <summary>Real Image Denoising (click to expan)</summary>
 
+
 - results in Table 4 of the main paper
 
 <p align="center">
   <img width="900" src="figs/Real-DN.png">
 </p>
+
 *: We re-test the SIDD with all official pre-trained models.
 
 </details>
@@ -342,6 +349,7 @@ We achieved state-of-the-art performance on image SR, JPEG compression artifact 
 ## Citation
 
 If you find the code helpful in your resarch or work, please cite the following paper(s).
+
 ```
 @inproceedings{chen2022cross,
     title={Cross Aggregation Transformer for Image Restoration},
