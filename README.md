@@ -12,10 +12,17 @@ Zheng Chen, [Yulun Zhang](http://yulunzhang.com/), [Jinjin Gu](https://www.jason
 > <img width="800" src="figs/git.png">
 > </p>
 
+---
+
+|                       SR (x4)                       |                           HQ                            |                              LQ                              |      [SwinIR](https://github.com/JingyunLiang/SwinIR)       |                        CAT (ours)                        |
+| :-------------------------------------------------: | :-----------------------------------------------------: | :----------------------------------------------------------: | :---------------------------------------------------------: | :------------------------------------------------------: |
+| <img src="figs/img_024_x4.png" style="zoom:24%;" /> | <img src="figs/img_024_HR_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_Bicubic_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_SwinIR_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_CAT_x4.png" style="zoom:150%;" /> |
+| <img src="figs/img_074_x4.png" style="zoom:24%;" /> | <img src="figs/img_074_HR_x4.png" style="zoom:150%;" /> | <img src="figs/img_074_Bicubic_x4.png" style="zoom:150%;" /> | <img src="figs/img_074_SwinIR_x4.png" style="zoom:150%;" /> | <img src="figs/img_074_CAT_x4.png" style="zoom:150%;" /> |
+
 ## Dependencies
 
 - Python 3.8
-- PyTorch >= 1.8.0
+- PyTorch 1.8.0
 - NVIDIA GPU + [CUDA](https://developer.nvidia.com/cuda-downloads)
 
 ```bash
@@ -273,6 +280,19 @@ We achieved state-of-the-art performance on image SR, JPEG compression artifact 
 <p align="center">
   <img width="900" src="figs/SR-2.png">
 </p>
+- visual comparison (x4) in the main paper
+
+<p align="center">
+  <img width="900" src="figs/SR-VC-1.png">
+</p>
+
+- visual comparison (x4) in the supplementary material
+
+<p align="center">
+  <img width="900" src="figs/SR-VC-2.png">
+  <img width="900" src="figs/SR-VC-3.png">
+  <img width="900" src="figs/SR-VC-4.png">
+</p>
 
 </details>
 
@@ -288,7 +308,21 @@ We achieved state-of-the-art performance on image SR, JPEG compression artifact 
 - results in Table 3 of the supplementary material (test on **Urban100**)
 
 <p align="center">
-  <img width="600" src="figs/CAR-2.png">
+  <img width="900" src="figs/CAR-2.png">
+</p>
+
+- visual comparison (q=10) in the main paper
+
+<p align="center">
+  <img width="900" src="figs/CAR-VC-1.png">
+</p>
+
+- visual comparison (q=10) in the supplementary material
+
+<p align="center">
+  <img width="900" src="figs/CAR-VC-2.png">
+  <img width="900" src="figs/CAR-VC-3.png">
+  <img width="900" src="figs/CAR-VC-4.png">
 </p>
 
 </details>
