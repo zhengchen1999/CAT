@@ -16,7 +16,7 @@ Zheng Chen, [Yulun Zhang](http://yulunzhang.com/), [Jinjin Gu](https://www.jason
 
 |                       SR (x4)                       |                           HQ                            |                              LQ                              |      [SwinIR](https://github.com/JingyunLiang/SwinIR)       |                        CAT (ours)                        |
 | :-------------------------------------------------: | :-----------------------------------------------------: | :----------------------------------------------------------: | :---------------------------------------------------------: | :------------------------------------------------------: |
-| <img src="figs/img_024_x4.png" style="zoom:24%;" /> | <img src="figs/img_024_HR_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_Bicubic_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_SwinIR_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_CAT_x4.png" style="zoom:150%;" /> |
+| <img src="figs/img_024_x4.png" style="zoom:5%;" /> | <img src="figs/img_024_HR_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_Bicubic_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_SwinIR_x4.png" style="zoom:150%;" /> | <img src="figs/img_024_CAT_x4.png" style="zoom:150%;" /> |
 | <img src="figs/img_074_x4.png" style="zoom:24%;" /> | <img src="figs/img_074_HR_x4.png" style="zoom:150%;" /> | <img src="figs/img_074_Bicubic_x4.png" style="zoom:150%;" /> | <img src="figs/img_074_SwinIR_x4.png" style="zoom:150%;" /> | <img src="figs/img_074_CAT_x4.png" style="zoom:150%;" /> |
 
 ## Dependencies
