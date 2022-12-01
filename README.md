@@ -37,8 +37,7 @@ python setup.py develop
 * [x] Image SR
 * [x] JPEG Compression Artifact Reduction
 * [x] Image Denoising
-* [ ] Image Deblurring
-* [ ] Image Deraining
+* [ ] Other tasks
 
 ## Contents
 
