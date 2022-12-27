@@ -64,13 +64,14 @@ class CATModle(SRModel):
             img = self.lq
             img = torch.cat([img, torch.flip(img, [2])], 2)[:, :, :h+mod_pad_h, :]
             img = torch.cat([img, torch.flip(img, [3])], 3)[:, :, :, :w+mod_pad_w]
-            _, _, H, W = img.size()
+            _B, _C, H, W = img.size()
             split_h = H // split_token_h
             split_w = W // split_token_w
             scale = self.opt.get('scale', 1)
 
             ral = H // split_h
             row = W // split_w
+
             slices = []
             for i in range(ral):
                 for j in range(row):
@@ -103,7 +104,7 @@ class CATModle(SRModel):
                     for chop in img_chops:
                         out = self.net_g(chop)
                         outputs.append(out)
-                    _img = torch.zeros(1, 1, H*scale, W*scale)
+                    _img = torch.zeros(_B, _C, H*scale, W*scale)
                     for i in range(ral):
                         for j in range(row):
                             top = slice(i * split_h*scale, (i + 1) * split_h*scale)
