@@ -13,7 +13,7 @@ For training and testing, the directory structure is as follows:
     |-- benchmark
         |-- Set5
             |-- HR
-          |-- LR_bicubic
+          	|-- LR_bicubic
                 |-- X2
                 |-- X3
                 |-- X4
