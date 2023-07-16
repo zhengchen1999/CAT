@@ -2,7 +2,7 @@
 
 [Zheng Chen](https://scholar.google.com/citations?user=zssRkBAAAAAJ), [Yulun Zhang](http://yulunzhang.com/), [Jinjin Gu](https://www.jasongt.com/), [Yongbing Zhang](https://shinning0821.github.io/index.html), [Linghe Kong](https://www.cs.sjtu.edu.cn/~linghe.kong/), and [Xin Yuan](https://xygroup6.github.io/xygroup/), "Cross Aggregation Transformer for Image Restoration", NeurIPS, 2022 (Spotlight)
 
-[[paper](https://openreview.net/pdf?id=wQ2QNNP8GtM)] [[arXiv]](https://arxiv.org/abs/2211.13654) [[supplementary material](https://openreview.net/attachment?id=wQ2QNNP8GtM&name=supplementary_material)] [[visual results](https://drive.google.com/drive/folders/1SIQ342yyrlHTCxINf9wYNchOa5eOw_7s?usp=sharing)] [[pretrained models](https://drive.google.com/drive/folders/1ebwl3ahPFczEswRNNIKYbO2PwZt0ZbqU?usp=sharing)]
+[[paper](https://openreview.net/pdf?id=wQ2QNNP8GtM)] [[arXiv](https://arxiv.org/abs/2211.13654)] [[supplementary material](https://openreview.net/attachment?id=wQ2QNNP8GtM&name=supplementary_material)] [[visual results](https://drive.google.com/drive/folders/1SIQ342yyrlHTCxINf9wYNchOa5eOw_7s?usp=sharing)] [[pretrained models](https://drive.google.com/drive/folders/1ebwl3ahPFczEswRNNIKYbO2PwZt0ZbqU?usp=sharing)]
 
 ---
 
