@@ -28,6 +28,8 @@
 ```bash
 # Clone the github repo and go to the default directory 'CAT'.
 git clone https://github.com/zhengchen1999/CAT.git
+conda create -n CAT python=3.8
+conda activate CAT
 pip install -r requirements.txt
 python setup.py develop
 ```
