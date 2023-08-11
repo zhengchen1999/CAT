@@ -180,7 +180,9 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
 
 - Download [testing](https://drive.google.com/file/d/1yMbItvFKVaCT93yPWmlP3883XtJ-wSee/view?usp=sharing) (Set5, Set14, BSD100, Urban100, Manga109, already processed) datasets, place them in `datasets/`.
 
-- Run the following scripts. The testing configuration is in `options/test/`.
+- Run the following scripts. The testing configuration is in `options/test/` (e.g., [test_CAT_R_sr_x2.yml](options/test/test_CAT_R_sr_x2.yml)).
+
+  Note 1:  You can set `use_chop: True` (default: False) in YML to chop the image for testing.
 
   ```shell
   # No self-ensemble
@@ -222,7 +224,7 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
 
 - Download [testing](https://drive.google.com/file/d/17hwSblurN93ndKFRFQQdoRgB-6pFmGtd/view?usp=sharing) (Classic5, LIVE, Urban100, already processed) datasets, place them in `datasets/`.
 
-- Run the following scripts. The testing configuration is in `options/test/`.
+- Run the following scripts. The testing configuration is in `options/test/` (e.g., [test_CAT_car_q10.yml](options/test/test_CAT_car_q10.yml)).
 
   ```shell
   # No self-ensemble
