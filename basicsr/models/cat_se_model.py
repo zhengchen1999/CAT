@@ -6,7 +6,7 @@ from basicsr.models.sr_model import SRModel
 
 
 @MODEL_REGISTRY.register()
-class CATSEModle(SRModel):
+class CATSEModel(SRModel):
 
     def test(self):
         # pad to multiplication of window_size

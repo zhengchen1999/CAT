@@ -1,6 +1,6 @@
 # general settings
 name: train_SR_CAT_R_2_x4
-model_type: CATModle
+model_type: CATModel
 scale: 4
 num_gpu: auto
 manual_seed: 10

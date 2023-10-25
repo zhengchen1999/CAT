@@ -1,6 +1,6 @@
 # general settings
 name: test_SR_CAT_R_2_x3
-model_type: CATModle
+model_type: CATModel
 scale: 3
 num_gpu: 1
 manual_seed: 10

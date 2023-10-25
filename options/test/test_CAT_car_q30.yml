@@ -1,6 +1,6 @@
 # general settings
 name: test_CAR_CAT_q30
-model_type: CATModle
+model_type: CATModel
 scale: 1
 num_gpu: 1
 manual_seed: 10
