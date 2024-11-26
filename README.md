@@ -265,7 +265,7 @@ The performance is reported on Urban100 (x4, SR), LIVE1 (q=10, CAR), and SIDD (r
 
 ## Results
 
-We achieved state-of-the-art performance on image SR, JPEG compression artifact reduction and real image denoising. Detailed results can be found in the paper. All visual results of CAT can be downloaded [here](https://drive.google.com/drive/folders/1SIQ342yyrlHTCxINf9wYNchOa5eOw_7s?usp=sharing).
+We achieve state-of-the-art performance on image SR, JPEG compression artifact reduction and real image denoising. Detailed results can be found in the paper. All visual results of CAT can be downloaded [here](https://drive.google.com/drive/folders/1SIQ342yyrlHTCxINf9wYNchOa5eOw_7s?usp=sharing).
 
 <details>
 <summary>Image SR (click to expand)</summary>
