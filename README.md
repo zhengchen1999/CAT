@@ -352,7 +352,7 @@ We achieve state-of-the-art performance on image SR, JPEG compression artifact r
 
 ## Citation
 
-If you find the code helpful in your resarch or work, please cite the following paper(s).
+If you find the code helpful in your research or work, please cite the following paper(s).
 
 ```
 @inproceedings{chen2022cross,
